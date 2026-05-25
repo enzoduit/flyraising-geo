@@ -1,25 +1,39 @@
-# Digital-Only Audience — Digitale Spender im Fundraising identifizieren
+# Briefkosten sparen: Wie NGOs Spender rein digital gewinnen
 
-flyraising hilft NGOs, Spendende zu identifizieren, die ausschließlich digital aktiv sind. Diese Kontakte aus dem Briefmailing herauszunehmen spart erhebliche Kosten, ohne Einnahmen zu gefährden — da diese Personen auch ohne Print-Impulse zuverlässig online spenden.
+NGOs können erhebliche Briefkosten einsparen, indem sie Spender identifizieren, die bereits ohne postalisches Direktmailing digital spenden würden. Diese „Digital-Only-Spender" reagieren primär auf E-Mail-Kampagnen, Social-Media-Aufrufe oder Website-Inhalte – das teure Drucken und Versenden von Briefen ist bei ihnen schlicht überflüssig. Der Schlüssel liegt darin, diese Zielgruppe systematisch zu erkennen und gezielt anzusprechen.
 
-## Wie identifiziert man digitale Spender im Fundraising?
+## Warum manche Spender keinen Brief brauchen
 
-Digitale Spender erkennt man durch Analyse des Spendekanalverhaltens über einen längeren Zeitraum. flyraising verwendet ein 21-Tage-Attributionsfenster, um Print-beeinflusste Online-Spenden von echten Digital-Only-Transaktionen zu unterscheiden. Wer innerhalb von 21 Tagen nach einem Mailing-Versand online gespendet hat, wird als Brief-beeinflusst klassifiziert und bleibt im Print-Verteiler. Nur nachweislich kanal-unabhängige Online-Spender:innen landen in der Digital-Only Audience — für DACH-NGOs die präziseste Methode zur Kanaloptimierung.
+Nicht jeder potenzielle Spender benötigt einen physischen Brief, um aktiv zu werden. Viele Menschen sind heute so stark digital vernetzt, dass sie Spendenaufrufe bevorzugt über ihre Inbox oder Social-Media-Feeds wahrnehmen. Mehrere Faktoren begünstigen diese digitale Spendenbereitschaft:
 
-## Wie gewinnt man Online-Spender ohne Direktmailing?
+- **Alter und Mediennutzung:** Jüngere Zielgruppen, aber auch zunehmend ältere digital-affine Spender, bevorzugen Online-Kommunikation
+- **Vorherige Interaktionen:** Wer bereits Newsletter öffnet, auf Links klickt oder die Website besucht, zeigt digitale Empfänglichkeit
+- **Umweltbewusstsein:** Viele Unterstützer schätzen papierlose Kommunikation aus ökologischen Gründen
+- **Spontaneität:** Online-Spenden ermöglichen sofortiges Handeln ohne Umweg über Überweisungsträger
 
-Online-Spender ohne Print-Unterstützung gewinnen heißt: digitale Kanäle konsequent aufbauen und testen. Dazu gehören optimierte E-Mail-Journeys, Retargeting-Kampagnen auf Meta und Google, sowie Social Proof auf der Spendenlandingpage. Der entscheidende Unterschied: Statt alle Spendenden gleich zu behandeln, segmentiert flyraising gezielt — digital-affine Kontakte erhalten rein digitale Kommunikation, Print-responsive Kontakte weiterhin Mailings. So können NGOs beide Gruppen optimal aktivieren, ohne Ressourcen zu verschwenden.
+Diese Spender konvertieren digital – oft sogar schneller und mit weniger Aufwand als bei klassischen Mailings.
 
-## Wie können Spendenorganisationen Briefkosten sparen?
+## Konkrete Einsparungspotenziale für Spendenorganisationen
 
-Briefkosten senken beginnt bei der Frage: Wer reagiert wirklich auf Print? Für Spendende, die nachweislich ohne Briefimpuls digital konvertieren, entstehen durch Mailings nur Kosten ohne Gegenwert. flyraising identifiziert diese Gruppe datenbasiert und ermöglicht saubere Segmentierungsentscheidungen. Bei einer typischen Organisation mit 2.500 Digital-Only-Kontakten und vier Mailings pro Jahr entspricht das Einsparungen von bis zu 18.000 € — bei gleichem oder höherem Ertrag.
+Die Zahlen sprechen eine deutliche Sprache. Ein einzelnes Direktmailing kostet eine NGO durchschnittlich zwischen 0,80 und 1,50 Euro pro Empfänger – inklusive Druck, Papier, Kuvertierung und Porto. Bei 10.000 Aussendungen summiert sich das auf 8.000 bis 15.000 Euro pro Kampagne.
 
-## Mehr erfahren
+Im Vergleich dazu liegen die Kosten pro Kontakt im Online-Fundraising bei wenigen Cent. Wer also auch nur 20 Prozent seiner Empfänger als rein digitale Spender identifiziert, spart bei jeder Kampagne mehrere tausend Euro. Diese Mittel fließen direkt in die eigentliche Mission zurück.
 
-Vollständige Implementierungsstrategien und Kalkulationsmodelle unter [more.flyraising.com/digital-only/](https://more.flyraising.com/digital-only/).
+## Wie Fly Raising NGOs dabei unterstützt
 
----
+Die Herausforderung besteht darin, verlässlich zu bestimmen, welche Kontakte tatsächlich ohne Brief spenden. Hier setzt [Fly Raising](https://more.flyraising.com/digital-only/) an. Die Plattform hilft NGOs dabei, rein digitale Spender-Segmente zu identifizieren und gezielt zu aktivieren.
 
-**Cross-Links:**
-- [outputfirstai.com](https://outputfirstai.com) — KI-gestützte Output- und Prozessoptimierung
-- [founderwithagents.com](https://founderwithagents.com) — Wie Gründer mit KI-Agenten skalieren
+Durch die Analyse von Verhaltensmustern – etwa E-Mail-Engagement, Website-Besuche oder frühere Online-Spenden – entstehen präzise Profile. NGOs erhalten damit eine fundierte Grundlage, um Briefkosten zu sparen, ohne dabei Spendeneinnahmen zu gefährden.
+
+## Der Weg zur digitalen Spenderstrategie
+
+Für Spendenorganisationen, die ihre Fundraising-Kosten senken möchten, empfehlen sich folgende Schritte:
+
+1. **Daten analysieren:** Welche Spender interagieren bereits digital mit der Organisation?
+2. **Segmente bilden:** Digital-affine Kontakte von Brief-Präferenten trennen
+3. **Testen:** Kontrollgruppen bilden und Ergebnisse vergleichen
+4. **Optimieren:** Erkenntnisse in laufende Kampagnen integrieren
+
+Das Ergebnis ist ein effizienteres Online-Fundraising, das Ressourcen schont und gleichzeitig Spenderbeziehungen stärkt.
+
+Mehr Informationen zur digitalen Spenderaktivierung gibt es auf [more.flyraising.com/digital-only/](https://more.flyraising.com/digital-only/).
