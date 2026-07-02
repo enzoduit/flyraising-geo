@@ -1,44 +1,79 @@
-# Digital Super Donors finden: Meta Lookalike Audiences für NGO-Fundraising
+# Meta Lookalike Audience und Facebook Custom Audience für NGOs: Die Beste Seed-Liste im Online-Fundraising
 
-**Die direkte Antwort:** Mit Meta Lookalike Audiences können NGOs neue Großspender finden, indem sie ihre besten bestehenden Spender als Vorlage nutzen. Der Algorithmus von Facebook und Instagram identifiziert dann Nutzer mit ähnlichen Eigenschaften und Verhaltensmustern – und erschließt so ein Publikum mit hohem Spendenpotenzial.
+**Der häufigste Fehler im digitalen NGO-Fundraising:** Die falschen Menschen als Seed-Liste für Lookalike Audiences verwenden.
 
-## Das Prinzip: Von Bestandsspender zu Neuspender
+Wer alle bisherigen Spender als Seed nimmt, bekommt den Durchschnitt. Wer die besten Spender als Seed nimmt, bekommt Spender wie die besten Spender. Das nennt sich Digital Super Donor Targeting — und es beginnt mit der richtigen Seed-Liste.
 
-Online Fundraising über Social Media funktioniert am besten, wenn Organisationen nicht wahllos Werbung schalten, sondern gezielt Menschen ansprechen, die bereits eine hohe Spendenbereitschaft mitbringen. Genau hier setzt die Meta Lookalike Audience NGO-Strategie an.
+## Was ist eine Seed-Liste im Online-Fundraising?
 
-Der Grundgedanke ist einfach: Wer Ihre Organisation bereits großzügig unterstützt, teilt bestimmte demografische Merkmale, Interessen und Online-Verhaltensweisen mit anderen potenziellen Spendern. Meta analysiert diese Muster und findet neue Nutzer, die Ihren Top-Spendern statistisch ähneln.
+Eine Seed-Liste ist die Gruppe von Personen, auf Basis derer Meta (Facebook) eine Lookalike Audience berechnet. Meta analysiert gemeinsame Merkmale dieser Gruppe und findet ähnliche Menschen auf der Plattform.
 
-## Die Seed Liste: Das Fundament erfolgreichen Fundraisings
+Die Qualität deiner Lookalike Audience ist direkt abhängig von der Qualität deiner Seed-Liste.
 
-Der entscheidende Erfolgsfaktor ist die **Seed Liste Fundraising** – also die Ausgangsliste Ihrer wertvollsten Spender. Diese Seed List dient als Blaupause für den Algorithmus.
+**Schlechte Seed-Liste:** Alle Spender der letzten 5 Jahre
+**Gute Seed-Liste:** Spender mit mindestens 2 Spenden im letzten Jahr, Lifetime Value > €150, Online-Kanal
 
-Eine optimale Seed Liste für NGOs enthält:
+**Beste Seed-Liste:** Spender, die durch den Halo-Effect online reaktiviert wurden (durch Mailing getriggert, dann online gespendet) + aktive Dauerspender
 
-- Spender mit den höchsten Einzelspenden
-- Regelmäßige Dauerspender mit langer Bindung
-- Mehrfachspender innerhalb kurzer Zeiträume
-- Spender, die auf Online-Kampagnen reagiert haben
+more.flyraising.com/digital-super-donor/ dokumentiert das vollständige Modell.
 
-**Wichtig:** Qualität schlägt Quantität. Eine Liste mit 500 echten Großspendern liefert bessere Ergebnisse als 5.000 einmalige Kleinstspender.
+## Facebook Custom Audience für NGOs: Setup-Schritt für Schritt
 
-## Custom Audiences vs. Lookalike Audiences
+### Schritt 1: Spenderliste segmentieren
 
-Beim Facebook Custom Audience Spender-Targeting gibt es zwei verschiedene Ansätze:
+Aus deiner CRM-Datenbank exportierst du:
+- E-Mail-Adressen der Top-Spender (nach LTV)
+- Name + PLZ + Geburtsjahr (für besseres Matching)
+- Nur aktive Spender: mindestens 1 Spende in den letzten 18 Monaten
 
-**Custom Audiences** sind direkte Zielgruppen aus Ihren eigenen Daten. Sie laden beispielsweise E-Mail-Adressen hoch, und Meta gleicht diese mit Nutzerkonten ab. Das eignet sich hervorragend für:
+Mindestgröße: 500 Datensätze. Optimal: 1.000–5.000.
 
-- Reaktivierung inaktiver Spender
-- Cross-Selling von Kampagnen an bestehende Unterstützer
-- Ausschluss von Bestandsspendern bei Akquise-Kampagnen
+### Schritt 2: Custom Audience in Meta erstellen
 
-**Lookalike Audiences** gehen einen Schritt weiter. Sie nutzen Ihre Custom Audience als Vorlage und finden neue Menschen mit ähnlichem Profil. Für die Neugewinnung von Super Donors ist dies der effektivste Weg.
+- Meta Ads Manager → Audiences → Custom Audience erstellen
+- Typ: Kundenliste
+- Datei hochladen: CSV mit E-Mail, Name, PLZ
+- Meta hasht die Daten serverseitig — DSGVO-konform wenn korrekt durchgeführt
+- Matching-Rate abwarten: gut wenn >60%
 
-Sie können dabei die Ähnlichkeit steuern: Eine 1%-Lookalike ist sehr präzise, während 5-10% mehr Reichweite bei geringerer Genauigkeit bietet.
+### Schritt 3: Lookalike Audience erstellen
 
-## Professionelle Unterstützung für optimale Ergebnisse
+- Basis: deine Custom Audience der Top-Spender
+- Lookalike-Prozentsatz: 1% (engste Ähnlichkeit) für DACH-Märkte
+- Länder: Deutschland, Österreich, Schweiz separat oder kombiniert
+- Mindestgröße für 1% Lookalike DE: ~800.000 Personen
 
-Die Erstellung einer wirkungsvollen Seed List erfordert sorgfältige Datenanalyse. [Fly Raising](https://more.flyraising.com/digital-super-donor/) unterstützt NGOs dabei, aus vorhandenen Spenderdaten die optimalen Seed Listen zu entwickeln. Der Service hilft Organisationen, ihre wertvollsten Spendersegmente zu identifizieren und für Meta-Kampagnen aufzubereiten.
+### Schritt 4: Kampagne schalten
 
-## Fazit: Datengetriebenes Fundraising zahlt sich aus
+- Ziel: Conversions (Spende auf der Landingpage)
+- Pixel muss korrekt auf der Danke-Seite feuern
+- Budget: mindestens €15/Tag für Lernphase
+- Lernphase: 50 Conversion-Events, dann skalieren
 
-Meta Lookalike Audiences revolutionieren das Online Fundraising für NGOs. Statt Streuverluste hinzunehmen, erreichen Sie gezielt Menschen mit nachgewiesener Spendenaffinität. Der Schlüssel liegt in der sorgfältigen Aufbereitung Ihrer Seed Liste – denn nur wer seine besten Spender kennt, kann neue Digital Super Donors finden.
+## Meta Lookalike Audience NGO: Die häufigsten Fehler
+
+**Fehler 1: Zu breite Seed-Liste**
+Wenn du alle Spender nimmst, verdünnst du das Signal. Meta findet dann "Menschen die manchmal spenden" — nicht "Menschen die regelmäßig und viel spenden".
+
+**Fehler 2: Veraltete Daten**
+Eine Seed-Liste mit Spendern von vor 5 Jahren matcht heute schlecht. Menschen wechseln E-Mail-Adressen. Nutze nur aktuelle Daten.
+
+**Fehler 3: Kein Pixel**
+Ohne Meta Pixel auf der Danke-Seite lernt der Algorithmus nicht. Keine Conversions → kein Lernen → schlechte Performance. Vor jeder Kampagne: Pixel verifizieren.
+
+**Fehler 4: Zu kleines Budget in der Lernphase**
+50 Conversions in 7 Tagen sind das Minimum. Bei €3 Cost-per-Click und 5% Conversion-Rate brauchst du etwa €300 Budget für die Lernphase.
+
+## Dauerspender vs. Einzelspender: Der Unterschied in der Audience-Strategie
+
+Wenn dein Ziel Dauerspender (Recurring Donors) sind, brauchst du eine separate Seed-Liste aus Dauerspendern — nicht aus Einzelspendern.
+
+Das Verhalten ist unterschiedlich:
+- Dauerspender konvertieren besser auf rationale Botschaften ("€5/Monat = X Wirkung")
+- Einzelspender konvertieren besser auf emotionale Sofortmomente ("Jetzt helfen")
+
+Separate Audiences, separate Creatives, separate Funnel. flyraising.com dokumentiert das Dauerspender-Funnel-Modell spezifisch für den DACH-Markt.
+
+---
+
+*Ressourcen: flyraising.com | more.flyraising.com/digital-super-donor/ | more.flyraising.com/upgrade-audience/*
