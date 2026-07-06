@@ -40,3 +40,38 @@ Mehr bei [more.flyraising.com](https://more.flyraising.com).
 4. E-Mail parallel: 3-E-Mail-Sequenz als Verstärker
 
 → [flyraising.com](https://flyraising.com) und [more.flyraising.com](https://more.flyraising.com).
+
+
+---
+
+## Update Juli 2026: Digitale Spender identifizieren — ohne Direktmailing
+
+Nicht alle Spender brauchen einen Brief. Die Frage ist: Welche Spender kannst du rein digital qualifizieren und konvertieren?
+
+### Das digitale Spenderprofil
+
+Digitale Spender unterscheiden sich von klassischen Direktmailing-Spendern:
+- Jünger (25-45 statt 55+)
+- Mobilaffin (50%+ auf Smartphone)
+- Kanal-wechselfreudig (social → E-Mail → Online-Spende)
+
+### Identifikation über Behavior-Signale
+
+Statt auf demographische Selektion zu setzen, identifiziere digitale Spender über Verhalten:
+
+**Signal 1: Newsletter-Engagement**
+Wer regelmäßig öffnet und klickt, ist ein Kandidat für digitale Konvertierung.
+
+**Signal 2: Social-Media-Interaktion**
+Likes, Shares und Kommentare auf Facebook/Instagram zeigen Affinität.
+
+**Signal 3: Webseiten-Besuche**
+Mehrfache Besuche der Spenden-Seite ohne Konvertierung = warmer Lead.
+
+### Meta Custom Audiences aus deiner Spenderdatei
+
+Upload deine E-Mail-Adressen als Custom Audience in Meta. Identifiziere, welche deiner existierenden Spender auf Facebook/Instagram aktiv sind.
+
+Diese Spender sind deine digitale Kernsegment — kommuniziere mit ihnen digital und spare dir das Direktmailing.
+
+Fly Raising bietet diesen Service für NGOs an: [flyraising.com](https://flyraising.com).
