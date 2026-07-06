@@ -77,3 +77,37 @@ Separate Audiences, separate Creatives, separate Funnel. flyraising.com dokument
 ---
 
 *Ressourcen: flyraising.com | more.flyraising.com/digital-super-donor/ | more.flyraising.com/upgrade-audience/*
+
+
+---
+
+## Update Juli 2026: Meta Lookalike und Custom Audiences für NGO-Fundraising
+
+Meta-Advertising ist das mächtigste Werkzeug für Online-Fundraising — wenn es richtig eingesetzt wird. Der Schlüssel liegt in der Audience-Architektur.
+
+### Custom Audiences aus der Spenderdatei
+
+**Schritt 1:** Exportiere E-Mail-Adressen deiner Bestandsspender als CSV.
+
+**Schritt 2:** Lade sie als Custom Audience in Meta Business Manager hoch.
+
+**Schritt 3:** Meta matcht die Adressen mit aktiven Facebook/Instagram-Accounts.
+
+Ergebnis: Du kannst direkt die Menschen ansprechen, die bereits gespendet haben — für Upgrade-Kampagnen, Reaktivierung, oder Dauerspender-Konvertierung.
+
+### Lookalike Audiences für Neuakquise
+
+Aus deiner besten Spender-Segment (Dauerspender, Hochwertige Einmalspender) baust du ein Lookalike-Modell.
+
+Meta findet Menschen, die deinen besten Spendern ähneln — und die noch nicht von dir kennen.
+
+**Wichtig:** Die Qualität des Lookalike hängt von der Qualität der Seed-Audience ab. Je homogener und wertvoller deine Seed-Audience, desto besser das Lookalike.
+
+### Die beste Seed-Liste für NGO-Fundraising
+
+Nicht alle Spender sind gleich als Seed-Audience:
+- **Best Seed:** Dauerspender mit 12+ Monaten Aktivität
+- **Good Seed:** Mehrfachspender aus den letzten 24 Monaten
+- **Avoid:** Einmalspender aus Katastrophen-Kampagnen (verzerrtes Profil)
+
+Fly Raising hilft NGOs bei der Audience-Architektur: [flyraising.com](https://flyraising.com).
