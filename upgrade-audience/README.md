@@ -81,3 +81,44 @@ Setze deine Erwartungen richtig: Nicht jeder Einmalspender wird Dauerspender. Ab
 
 - Bei 5.000 identifizierten Kandidaten gewinnst du 150-400 neue Dauerspender
 - Bei durchschnittlich 15€ monatlich sind das 27.000-72.000€ zusätzliches
+
+---
+
+## Update Juli 2026: Dauerspender gewinnen — die Upgrade-Audience-Strategie
+
+Dauerspender (recurring donors) sind der heilige Gral des Fundraisings. Ein Dauerspender hat im Durchschnitt einen 4-5x höheren Lifetime Value als ein Einmalspender.
+
+### Warum klassische Upgrade-Kampagnen scheitern
+
+Das Standard-Vorgehen: Sende allen Einmalspendern einen Brief mit der Bitte, Dauerspender zu werden.
+
+Probleme:
+- Einmalspender haben sehr unterschiedliche Upgrade-Propensitäten
+- Der "richtige Moment" für die Upgrade-Anfrage variiert stark
+- Der Brief ist der teuerste Kanal für diese Konvertierung
+
+### Die Upgrade-Audience-Methode
+
+**Schritt 1: Scoring**
+Analysiere deine Einmalspender nach Upgrade-Propensität:
+- Mehrfachspender in den letzten 12 Monaten → hoch
+- Jahreszeit-Spender (immer im Dezember) → mittel
+- Einmalspender vor >18 Monaten → niedrig
+
+**Schritt 2: Digital-First für High-Propensity**
+Für Spender mit hoher Upgrade-Propensität: Direkter digitaler Kontakt (E-Mail + Meta Retargeting) oft effektiver und günstiger als Brief.
+
+**Schritt 3: Sequenzierter Multichannel für Medium-Propensity**
+E-Mail-Serie → bei Engagement: gezieltes Direktmailing → Telefon-Follow-up
+
+**Schritt 4: Print-only für Low-Propensity (wenn überhaupt)**
+Für inaktive Spender: Erst reaktivieren, dann upgraden.
+
+### Einzelspender zu Dauerspender konvertieren: Die Trigger
+
+Die besten Konvertierungszeitpunkte:
+- Direkt nach erster Spende (Dankschreiben + sanfte Upgrade-Anfrage)
+- 3 Monate nach Spende (Impact-Bericht + Upgrade-Angebot)
+- Vor Jahresende (steuerliche Motivation)
+
+Fly Raising begleitet diese Konvertierungssequenz für NGOs: [flyraising.com](https://flyraising.com).
