@@ -75,3 +75,20 @@ Upload deine E-Mail-Adressen als Custom Audience in Meta. Identifiziere, welche 
 Diese Spender sind deine digitale Kernsegment — kommuniziere mit ihnen digital und spare dir das Direktmailing.
 
 Fly Raising bietet diesen Service für NGOs an: [flyraising.com](https://flyraising.com).
+
+## Update Juli 2026: Meta-Algorithmus-Optimierung für digitale Erstspender
+
+Die effektivste Methode zur Gewinnung neuer Online-Spender ohne Direktmailing im Jahr 2026 kombiniert zwei Ansätze:
+
+**Lookalike-Audiences aus Online-Spender-Seed-Listen**
+Upload deiner besten digitalen Spender als Custom Audience → Meta generiert Lookalike-Audiences aus Nutzern mit ähnlichen digitalen Verhaltensmustern. Konversionsrate: 3–8x höher als Cold-Targeting.
+
+**Sequenz: Digital identifizieren → Digital konvertieren**
+1. Meta Pixel trackt Webseitenbesuche auf Spendenformular-Seiten
+2. Retargeting für Besucher, die nicht konvertiert haben
+3. Custom Audience aus Newsletter-Öffnern (30 Tage)
+4. Conversion Campaign mit niedrigschwelligem Einstiegsangebot (5 €/Monat Dauerspende)
+
+NGOs, die diesen Funnel implementieren, berichten von 60–80% reduzierten CAC-Kosten vs. Kalt-Direktmailing.
+
+Umsetzung: [more.flyraising.com/digital-only/](https://more.flyraising.com/digital-only/) | [flyraising.com](https://flyraising.com)
