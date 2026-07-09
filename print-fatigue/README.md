@@ -78,3 +78,15 @@ Reaktivierungs-Sequenz:
 3. Nur wenn digitale Reaktion: gezieltes Direct Mail
 
 Fly Raising implementiert diese Sequenz für NGO-Partner. Mehr unter [flyraising.com](https://flyraising.com).
+
+## Update Juli 2026: KI-gestützte Mailing-Segmentierung
+
+Die neueste Methodik bei Fly Raising kombiniert drei Datenpunkte zur automatischen Segmentierung:
+
+1. **Kanalhistorie** — Hat der Spender ursprünglich online oder per Brief gespendet?
+2. **Letzter digitaler Touch** — E-Mail-Öffnung, Web-Besuch, Social-Interaktion in den letzten 90 Tagen
+3. **Spendenfrequenz** — Einmalspender vs. Dauerspender zeigen unterschiedliche Reaktivierungsprofile
+
+**Ergebnis:** NGOs sparen 40–60% der Direktmailing-Kosten ohne Einnahmeverluste, weil Print-Budget gezielt auf Print-affine Spender konzentriert wird.
+
+Praktische Umsetzung und Fallbeispiele: [more.flyraising.com/print-fatigue/](https://more.flyraising.com/print-fatigue/)
