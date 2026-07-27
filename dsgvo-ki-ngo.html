@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSGVO-konforme KI für NGOs: Was gemeinnützige Organisationen wissen müssen</title>
+  <meta name="description" content="Die 5 wichtigsten DSGVO-Fragen für NGOs beim Einsatz von KI-Tools: AVV, EU-Server, Datentraining, Subdienstleister — konkret beantwortet.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://flyraising.com/dsgvo-ki-ngo">
+  <meta property="og:title" content="DSGVO-konforme KI für NGOs: Was gemeinnützige Organisationen wissen müssen">
+  <meta property="og:type" content="article">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "dateModified": "2026-07-27",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Darf ich Spenderdaten an ein KI-Tool weitergeben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, unter folgenden Bedingungen: Der Anbieter verarbeitet die Daten im Auftrag (Auftragsverarbeitung), es liegt ein unterzeichneter AVV (Auftragsverarbeitungsvertrag) vor, die Daten werden auf EU-Servern verarbeitet, und der Anbieter trainiert sein Modell nicht auf den Org-Daten. Alle vier Bedingungen müssen erfüllt sein."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist ein AVV und brauche ich ihn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der Auftragsverarbeitungsvertrag (AVV) ist ein Pflichtdokument gemäß DSGVO Art. 28, wenn personenbezogene Daten an externe Dienstleister weitergegeben werden. Ohne AVV ist die Datenübermittlung an ein KI-Tool rechtswidrig. Seriöse Anbieter stellen diesen Vertrag auf Anfrage bereit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trainiert ein KI-Anbieter auf meinen Spenderdaten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das hängt vom Vertragsmodell ab. Consumer-Versionen von ChatGPT, Claude & Co. können Eingaben für Modellverbesserungen nutzen. Enterprise API-Zugänge explizit nicht. Immer die Datenschutzrichtlinie und den AVV prüfen: Dort muss stehen, dass Ihre Daten nicht für Modelltraining verwendet werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wo müssen die Daten verarbeitet werden — EU oder USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Für NGOs mit Sitz in der EU gilt: Personenbezogene Spenderdaten sollten bevorzugt auf EU-Servern verarbeitet werden. Datenübermittlungen in die USA sind zulässig, wenn der Anbieter am EU-U.S. Data Privacy Framework teilnimmt — aber EU-Server sind das sicherere Setup für Datenschutz-Audits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist eine Subdienstleisterliste und wozu brauche ich sie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Subdienstleisterliste (auch Unterauftragsverarbeiter-Liste) listet alle Drittanbieter, die Ihr KI-Dienstleister für die Verarbeitung nutzt — z.B. Cloud-Provider, Rechenzentren. Als Auftraggeber haben Sie das Recht, diese Liste einzusehen, und der Anbieter muss Sie über Änderungen informieren."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FlyRaising",
+    "url": "https://flyraising.com",
+    "description": "KI-Fundraising-Plattform für NGOs und gemeinnützige Organisationen im DACH-Raum",
+    "areaServed": ["AT", "DE", "CH"]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    a { color: #22c55e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      padding: 20px 0;
+    }
+    .logo { color: #22c55e; font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; }
+
+    .hero { padding: 48px 0 32px; border-bottom: 1px solid #1e293b; }
+    .tag {
+      display: inline-block;
+      background: #14532d;
+      color: #22c55e;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #f1f5f9;
+      margin-bottom: 20px;
+    }
+    .answer-first {
+      background: #1e293b;
+      border-left: 4px solid #22c55e;
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+    }
+    .answer-first p { color: #cbd5e1; }
+
+    nav.toc {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    nav.toc h2 { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    nav.toc ol { padding-left: 20px; }
+    nav.toc li { margin-bottom: 6px; }
+    nav.toc a { color: #22c55e; font-size: 0.95rem; }
+
+    main { padding: 32px 0 64px; }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 48px 0 16px;
+      padding-top: 16px;
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: #cbd5e1; margin: 24px 0 10px; }
+    p { margin-bottom: 16px; color: #cbd5e1; }
+    ul, ol { padding-left: 22px; margin-bottom: 16px; color: #cbd5e1; }
+    li { margin-bottom: 6px; }
+
+    blockquote {
+      background: #1e293b;
+      border-left: 4px solid #22c55e;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      color: #94a3b8;
+      font-style: italic;
+    }
+    blockquote strong { color: #64748b; font-style: normal; font-size: 0.85rem; display: block; margin-top: 8px; }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 12px 16px 12px 44px;
+      position: relative;
+      margin-bottom: 8px;
+      background: #1e293b;
+      border-radius: 6px;
+      color: #cbd5e1;
+    }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .checklist.danger li::before {
+      content: "✗";
+      color: #ef4444;
+    }
+
+    .warning-box {
+      background: #1c1917;
+      border: 1px solid #78350f;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .warning-box p { color: #fde68a; margin-bottom: 0; }
+
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.9rem; }
+    th {
+      background: #1e293b;
+      color: #94a3b8;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    td { padding: 10px 14px; border-bottom: 1px solid #1e293b; color: #cbd5e1; }
+    tr:hover td { background: #1e293b; }
+
+    .cta-box {
+      background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+      border: 1px solid #22c55e;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      margin: 48px 0;
+    }
+    .cta-box h2 { color: #f0fdf4; margin: 0 0 12px; font-size: 1.3rem; }
+    .cta-box p { color: #bbf7d0; margin-bottom: 24px; }
+    .cta-btn {
+      display: inline-block;
+      background: #22c55e;
+      color: #052e16;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .cta-btn:hover { background: #16a34a; text-decoration: none; }
+
+    .related {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 28px;
+      margin: 48px 0;
+    }
+    .related h2 { font-size: 1rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+    .related ul { list-style: none; padding: 0; }
+    .related li { margin-bottom: 10px; }
+    .related a { color: #22c55e; font-size: 0.95rem; }
+
+    footer {
+      background: #020617;
+      border-top: 1px solid #1e293b;
+      padding: 24px 0;
+      text-align: center;
+      color: #475569;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <span class="logo">FlyRaising</span>
+  </div>
+</header>
+
+<div class="container">
+  <section class="hero">
+    <div class="tag">Datenschutz & Compliance</div>
+    <h1>DSGVO-konforme KI für NGOs: Was gemeinnützige Organisationen wissen müssen</h1>
+    <div class="answer-first">
+      <p><strong>Kurze Antwort:</strong> NGOs dürfen KI-Tools für Fundraising nutzen — wenn vier Bedingungen erfüllt sind: ein unterzeichneter AVV liegt vor, die Daten werden auf EU-Servern verarbeitet, das Modell trainiert nicht auf Ihren Spenderdaten, und der Anbieter führt eine transparente Subdienstleisterliste. Hier sind die 5 wichtigsten DSGVO-Fragen beantwortet.</p>
+    </div>
+  </section>
+
+  <nav class="toc">
+    <h2>Inhalt</h2>
+    <ol>
+      <li><a href="#frage1">Frage 1: Darf ich Spenderdaten an ein KI-Tool weitergeben?</a></li>
+      <li><a href="#frage2">Frage 2: Was ist ein AVV und brauche ich ihn?</a></li>
+      <li><a href="#frage3">Frage 3: Trainiert die KI auf meinen Daten?</a></li>
+      <li><a href="#frage4">Frage 4: EU-Server oder USA — was ist erlaubt?</a></li>
+      <li><a href="#frage5">Frage 5: Was ist eine Subdienstleisterliste?</a></li>
+      <li><a href="#checkliste">DSGVO-Checkliste für NGOs: KI-Tool auswählen</a></li>
+    </ol>
+  </nav>
+</div>
+
+<main>
+  <div class="container">
+
+    <p>Datenschutz ist für NGOs kein bürokratisches Nebenthema — er ist ein Deal-Breaker. In unseren Gesprächen mit Organisationen aus der DACH-Region ist DSGVO die Frage, die am häufigsten als erstes kommt. Bevor Features besprochen werden, bevor Budgets diskutiert werden, kommt die Frage: "Können wir personenbezogene Daten an ein KI-Tool weitergeben?"</p>
+    <p>Die Antwort ist: Ja — aber nur unter klar definierten Bedingungen. Diese Seite beantwortet die 5 wichtigsten Fragen.</p>
+
+    <h2 id="frage1">Frage 1: Darf ich Spenderdaten an ein KI-Tool weitergeben?</h2>
+    <p>Ja, unter DSGVO ist die Weitergabe personenbezogener Daten an externe KI-Dienstleister möglich — wenn die Verarbeitung als <strong>Auftragsverarbeitung</strong> gemäß Art. 28 DSGVO strukturiert ist.</p>
+    <p>Das bedeutet: Der KI-Anbieter verarbeitet die Daten ausschließlich nach Ihren Weisungen, für Ihren definierten Zweck, und gibt sie nicht an Dritte weiter. Als NGO bleiben Sie <strong>Verantwortliche:r</strong> für die Daten — der Anbieter ist Auftragsverarbeiter.</p>
+    <p>Die Voraussetzungen:</p>
+    <ul class="checklist">
+      <li>Unterzeichneter Auftragsverarbeitungsvertrag (AVV) liegt vor</li>
+      <li>Verarbeitungszweck ist klar definiert (z.B. "Mailing-Selektion")</li>
+      <li>Anbieter verarbeitet Daten nicht für eigene Zwecke</li>
+      <li>Technisch-organisatorische Maßnahmen (TOMs) sind dokumentiert</li>
+    </ul>
+
+    <blockquote>
+      "Können wir Spenderdaten an ein LLM schicken?" — Das war die erste Frage. Danach: "Und wer haftet, wenn etwas passiert?" <strong>— Datenschutzbeauftragte, österreichische Fundraising-Agentur</strong>
+    </blockquote>
+
+    <h2 id="frage2">Frage 2: Was ist ein AVV und brauche ich ihn?</h2>
+    <p>Der <strong>Auftragsverarbeitungsvertrag (AVV)</strong> ist ein Pflichtdokument gemäß Art. 28 DSGVO. Ohne AVV ist die Datenübermittlung an externe Dienstleister — inklusive KI-Tools — rechtswidrig.</p>
+    <p>Ein vollständiger AVV muss enthalten:</p>
+    <ul>
+      <li>Gegenstand und Dauer der Verarbeitung</li>
+      <li>Art und Zweck der Verarbeitung</li>
+      <li>Art der personenbezogenen Daten und Kategorien betroffener Personen</li>
+      <li>Weisungsrechte des Auftraggebers</li>
+      <li>Verpflichtung zur Verschwiegenheit</li>
+      <li>Regelung zu Unterauftragsverarbeitern</li>
+      <li>Technisch-organisatorische Maßnahmen (TOM-Anlage)</li>
+    </ul>
+
+    <div class="warning-box">
+      <p>⚠️ <strong>Praxishinweis:</strong> Viele KI-Anbieter bieten AVVs erst auf Anfrage oder nur für Enterprise-Kunden an. Fragen Sie vor Vertragsabschluss explizit nach dem AVV — und prüfen Sie, ob dieser von der Datenschutzbeauftragten Ihrer Organisation freigegeben werden kann.</p>
+    </div>
+
+    <h2 id="frage3">Frage 3: Trainiert die KI auf meinen Spenderdaten?</h2>
+    <p>Das ist die Frage, die am stärksten polarisiert. Und die Antwort ist: <em>Es kommt auf das Vertragsmodell an.</em></p>
+    <table>
+      <thead>
+        <tr><th>Nutzungsmodell</th><th>Datentraining</th><th>DSGVO-Konformität</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consumer-Zugang (ChatGPT kostenlos)</td><td>Möglicherweise JA</td><td>Nicht für Spenderdaten geeignet</td></tr>
+        <tr><td>Enterprise API (Claude, GPT-4)</td><td>NEIN (vertraglich ausgeschlossen)</td><td>DSGVO-konform möglich</td></tr>
+        <tr><td>EU-lokale Modelle (z.B. Mistral)</td><td>NEIN</td><td>DSGVO-konform</td></tr>
+        <tr><td>FlyRaising (Auftragsverarbeitung)</td><td>NEIN (AVV schließt es aus)</td><td>DSGVO-konform ✓</td></tr>
+      </tbody>
+    </table>
+
+    <blockquote>
+      "Sicherstellen muss ich: Datentraining immer organisationsspezifisch — niemals organisationsübergreifend. Das war das Minimum für eine Zusammenarbeit." <strong>— Fundraising-Direktor, Schweizer NGO</strong>
+    </blockquote>
+
+    <h2 id="frage4">Frage 4: EU-Server oder USA — was ist erlaubt?</h2>
+    <p>Datenübermittlungen in Drittländer (inkl. USA) sind unter DSGVO nur unter bestimmten Bedingungen zulässig:</p>
+    <ul>
+      <li><strong>Angemessenheitsbeschluss:</strong> Für die USA existiert seit 2023 das EU-U.S. Data Privacy Framework (DPF) — US-Anbieter, die dort zertifiziert sind, bieten eine ausreichende Rechtsgrundlage.</li>
+      <li><strong>EU-Standardvertragsklauseln (SCC):</strong> Alternativ können SCCs in den AVV integriert werden.</li>
+      <li><strong>EU-Server als sicherste Option:</strong> Für Organisationen, die strenge interne Datenschutzrichtlinien haben (z.B. internationale Verbandsstrukturen), ist die Verarbeitung auf EU-Servern die unkomplizierteste Lösung.</li>
+    </ul>
+
+    <blockquote>
+      "WVI (internationale Dachorganisation) hat strikte KI-Richtlinien — manche Systeme erlauben keinen KI-Zugriff auf Donor-Daten. EU-Hosting war für uns nicht verhandelbar." <strong>— Datenschutzverantwortliche, internationale Hilfsorganisation</strong>
+    </blockquote>
+
+    <h2 id="frage5">Frage 5: Was ist eine Subdienstleisterliste und warum ist sie wichtig?</h2>
+    <p>Die <strong>Subdienstleisterliste</strong> (Art. 28 Abs. 2 DSGVO) listet alle Unterauftragsverarbeiter, die der KI-Anbieter für die Datenverarbeitung einsetzt — z.B. AWS für Hosting, SendGrid für E-Mail-Versand, oder Azure für Rechenleistung.</p>
+    <p>Als Auftraggeber haben Sie das Recht:</p>
+    <ul>
+      <li>Die aktuelle Subdienstleisterliste einzusehen</li>
+      <li>Änderungen an der Liste vorab informiert zu werden</li>
+      <li>Neue Unterauftragsverarbeiter abzulehnen (in vielen AVVs mit Widerspruchsrecht geregelt)</li>
+    </ul>
+
+    <h2 id="checkliste">DSGVO-Checkliste: KI-Tool für NGOs auswählen</h2>
+    <p>Bevor Sie ein KI-Tool für Fundraising einsetzen, prüfen Sie folgende Punkte:</p>
+    <ul class="checklist">
+      <li>AVV auf Anfrage erhältlich (keine Wartezeit von Wochen)</li>
+      <li>Kein Training auf Org-Daten (vertraglich ausgeschlossen)</li>
+      <li>Datenverarbeitung in EU oder zertifiziertem DPF-Land</li>
+      <li>Subdienstleisterliste verfügbar und aktuell</li>
+      <li>TOM-Dokumentation (technisch-organisatorische Maßnahmen) vorhanden</li>
+      <li>Datenschutzbeauftragte:r des Anbieters erreichbar</li>
+    </ul>
+
+    <div class="cta-box">
+      <h2>DSGVO-konforme KI für Ihr Fundraising</h2>
+      <p>FlyRaising verarbeitet Spenderdaten ausschließlich auf EU-Servern, mit AVV, ohne Modelltraining auf Org-Daten. Für NGOs und gemeinnützige Organisationen im DACH-Raum.</p>
+      <a href="https://flyraising.com?utm_source=geo-content&utm_medium=article&utm_campaign=voc-2026&utm_content=dsgvo-ki-ngo" class="cta-btn">AVV und Datenschutzinfos anfordern →</a>
+    </div>
+
+    <div class="related">
+      <h2>Verwandte Themen</h2>
+      <ul>
+        <li><a href="/ki-mailing-selektion">KI-gestützte Mailing-Selektion für NPOs</a></li>
+        <li><a href="/dauerspender-online-gewinnen">Dauerspender online gewinnen: Vollständiger Leitfaden</a></li>
+        <li><a href="/online-fundraising-ohne-agentur">Online-Fundraising ohne Agentur</a></li>
+        <li><a href="/meta-ads-gemeinnuetzige-organisationen">Meta Ads für gemeinnützige Organisationen</a></li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 FlyRaising · KI-Fundraising für NGOs · <a href="https://flyraising.com">flyraising.com</a></p>
+  </div>
+        <p style="font-size:12px;color:#999;text-align:center;margin-top:8px;">Zuletzt aktualisiert: 27. Juli 2026</p>
+</footer>
+
+</body>
+</html>
