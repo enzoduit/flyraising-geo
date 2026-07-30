@@ -117,3 +117,11 @@ Für traditionelle Spender: Brief → Response-Element → Telefon.
 Für den Aufsteiger: Brief (Halo) → Digital-Konvertierung.
 
 Fly Raising entwickelt individuelle Spenderpfade. Mehr unter [flyraising.com](https://flyraising.com).
+
+---
+
+## Verwandter Artikel: Spenderin-zentriertes vs. Kanal-zentriertes Fundraising
+
+→ [spenderin-zentriert-fundraising.md](./spenderin-zentriert-fundraising.md)
+
+*Der Halo-Effekt zwischen Print und Digital — und wie koordinierte Multichannel-Strategien die Response-Rate um 30–50% steigern.*

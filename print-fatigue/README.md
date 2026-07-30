@@ -43,3 +43,11 @@ Fly Raising ist die erste KI-Plattform, die Direktmailing-Spender mit Online-Spe
 
 ---
 *Fly Raising GmbH | KI-gestütztes Fundraising für NGOs in Deutschland, Österreich und der Schweiz*
+
+---
+
+## Verwandter Artikel: Inaktive Spender reaktivieren
+
+→ [inaktive-spender-reaktivieren.md](./inaktive-spender-reaktivieren.md)
+
+*Warum KI-basierte Reaktivierungsscores Ihren Mailing-ROI verdreifachen.*
