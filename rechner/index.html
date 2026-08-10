@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dauerspender-Rechner — Was kostet dich ein Spender wirklich? | FlyRaising</title>
+  <meta name="description" content="Berechne deinen echten Cost-per-Acquisition für Dauerspender — inkl. Lifetime Value, Break-Even und KI-Benchmark-Vergleich. Kostenlos für NGOs.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://info.flyraising.com/rechner/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #141210; --bg2: #1c1a17; --bg3: #242118;
+      --gold: #C4872A; --gold-light: #E5A84A;
+      --text: #E8E2D9; --text-muted: #9A9185; --text-faint: #5A5450;
+      --border: #2C2924;
+      --green: #4CAF50; --red: #E5534B;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 16px; line-height: 1.7; padding-bottom: 60px; }
+    a { color: var(--gold); text-decoration: none; }
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+    header { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .logo { color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+    .logo span { color: var(--text-muted); font-weight: 400; }
+
+    .hero { padding: 48px 0 32px; text-align: center; }
+    .eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.73rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 18px; padding: 5px 12px; border: 1px solid var(--gold); border-radius: 4px; opacity: 0.85; }
+    h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 14px; color: #F0EAE0; }
+    h1 em { color: var(--gold); font-style: normal; }
+    .subtitle { font-size: 1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+    /* Calculator card */
+    .calc-card {
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin: 32px 0;
+    }
+    .calc-section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+    .field-group {
+      margin-bottom: 20px;
+    }
+    .field-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .field-group .hint {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      margin-bottom: 8px;
+    }
+    .field-group input[type="number"] {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .field-group input:focus { border-color: var(--gold); }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .calc-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--gold);
+      color: #141210;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    .calc-btn:hover { background: var(--gold-light); }
+
+    /* Results */
+    .results-card {
+      display: none;
+      background: var(--bg2);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin: 24px 0;
+    }
+    .results-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      margin-bottom: 24px;
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .result-box {
+      background: var(--bg3);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .result-label {
+      font-size: 0.75rem;
+      color: var(--text-faint);
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .result-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .result-value.good { color: var(--green); }
+    .result-value.bad { color: var(--red); }
+    .result-sub {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      margin-top: 4px;
+    }
+
+    /* Benchmark bar */
+    .benchmark-bar {
+      margin: 20px 0;
+    }
+    .benchmark-bar-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .bar-track {
+      position: relative;
+      height: 10px;
+      background: var(--bg3);
+      border-radius: 5px;
+      margin-bottom: 8px;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 5px;
+      background: linear-gradient(90deg, var(--green) 0%, var(--gold) 50%, var(--red) 100%);
+    }
+    .bar-marker {
+      position: absolute;
+      top: -4px;
+      width: 4px;
+      height: 18px;
+      background: #F0EAE0;
+      border-radius: 2px;
+      transform: translateX(-50%);
+    }
+    .bar-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .verdict-box {
+      background: var(--bg3);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 16px 0;
+    }
+    .verdict-label {
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .verdict-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .verdict-text strong { color: #F0EAE0; }
+
+    /* Lead capture in results */
+    .results-cta {
+      background: linear-gradient(135deg, #1e1c15 0%, var(--bg2) 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .results-cta h3 { font-size: 1rem; font-weight: 700; color: #F0EAE0; margin-bottom: 6px; }
+    .results-cta p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; }
+    .results-form { display: flex; gap: 10px; }
+    .results-form input {
+      flex: 1;
+      padding: 11px 14px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none;
+    }
+    .results-form input:focus { border-color: var(--gold); }
+    .results-form button {
+      padding: 11px 18px;
+      background: var(--gold);
+      color: #141210;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .results-form button:hover { background: var(--gold-light); }
+    .form-note-sm { font-size: 0.72rem; color: var(--text-faint); margin-top: 8px; }
+    .results-success { display: none; text-align: center; padding: 12px 0; }
+    .results-success .ck { font-size: 1.8rem; color: var(--gold); }
+    .results-success p { font-size: 0.9rem; color: var(--text-muted); margin-top: 6px; }
+
+    /* Info section */
+    .section { padding: 40px 0; border-top: 1px solid var(--border); }
+    .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+    h2 { font-size: 1.35rem; font-weight: 700; color: #F0EAE0; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .info-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .info-list li { display: flex; gap: 12px; align-items: flex-start; }
+    .info-list .ic { color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+    .info-list .it { font-size: 0.92rem; color: var(--text-muted); }
+    .info-list .it strong { color: #F0EAE0; display: block; }
+
+    footer { padding: 32px 0 16px; border-top: 1px solid var(--border); }
+    footer p { font-size: 0.78rem; color: var(--text-faint); }
+
+    @media (max-width: 560px) {
+      .field-row { grid-template-columns: 1fr; }
+      .result-grid { grid-template-columns: 1fr; }
+      .results-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">FlyRaising <span>· info</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="hero">
+      <div class="eyebrow">Kostenloses Tool · NGO Fundraising</div>
+      <h1>Was kostet dich ein<br><em>Dauerspender</em> wirklich?</h1>
+      <p class="subtitle">Berechne deinen echten CPA, Lifetime Value und Break-Even — und sieh, wie du im DACH-Benchmark abschneidest.</p>
+    </section>
+
+    <!-- Calculator -->
+    <div class="calc-card">
+      <div class="calc-section-title">Kampagnen-Daten eingeben</div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label>Werbebudget (€/Monat)</label>
+          <div class="hint">Nur Media-Spend, ohne Agentur</div>
+          <input type="number" id="budget" placeholder="2000" min="0" value="">
+        </div>
+        <div class="field-group">
+          <label>Neue Dauerspender/Monat</label>
+          <div class="hint">Tatsächliche Abschlüsse</div>
+          <input type="number" id="new_donors" placeholder="12" min="0" value="">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label>Ø Monatliche Spende (€)</label>
+          <div class="hint">Durchschnittliche Dauerspende</div>
+          <input type="number" id="avg_donation" placeholder="18" min="0" value="">
+        </div>
+        <div class="field-group">
+          <label>Ø Bindedauer (Monate)</label>
+          <div class="hint">Wie lange bleibt ein Spender?</div>
+          <input type="number" id="retention" placeholder="36" min="1" value="">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Agentur/Setup-Kosten (€/Monat, optional)</label>
+        <div class="hint">Externe Kosten für Kampagnen-Management</div>
+        <input type="number" id="agency_cost" placeholder="0" min="0" value="">
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Jetzt berechnen →</button>
+    </div>
+
+    <!-- Results -->
+    <div class="results-card" id="results-card">
+      <div class="results-title">Deine Auswertung</div>
+
+      <div class="result-grid">
+        <div class="result-box">
+          <div class="result-label">Dein CPA</div>
+          <div class="result-value" id="res-cpa">—</div>
+          <div class="result-sub">Cost per Acquisition</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">Lifetime Value</div>
+          <div class="result-value" id="res-ltv">—</div>
+          <div class="result-sub">pro Dauerspender</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">LTV:CPA Ratio</div>
+          <div class="result-value" id="res-ratio">—</div>
+          <div class="result-sub">Ziel: &gt; 4:1</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">Break-Even</div>
+          <div class="result-value" id="res-breakeven">—</div>
+          <div class="result-sub">Monate bis Gewinn</div>
+        </div>
+      </div>
+
+      <!-- Benchmark position -->
+      <div class="benchmark-bar">
+        <div class="benchmark-bar-title">Dein CPA im DACH-Benchmark (€100–€1.000):</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100%"></div>
+          <div class="bar-marker" id="bar-marker" style="left: 50%"></div>
+        </div>
+        <div class="bar-labels">
+          <span>€100 (Top)</span>
+          <span>€350 (Median)</span>
+          <span>€1.000 (Hoch)</span>
+        </div>
+      </div>
+
+      <div class="verdict-box">
+        <div class="verdict-label">Einschätzung</div>
+        <div class="verdict-text" id="verdict-text">—</div>
+      </div>
+
+      <!-- Lead capture -->
+      <div class="results-cta">
+        <h3>Vollständiger Benchmark-Bericht für deine NGO</h3>
+        <p>Erhalte den vollständigen Branchen-Vergleich mit Daten aus 20 KI-Experimenten — kostenlos per E-Mail.</p>
+        <div id="results-form-wrap">
+          <form id="results-lead-form" class="results-form" novalidate>
+            <input type="email" name="email" placeholder="Deine E-Mail" required>
+            <button type="submit">Bericht anfordern →</button>
+          </form>
+          <p class="form-note-sm">🔒 DSGVO-konform · Keine Weitergabe</p>
+        </div>
+        <div class="results-success" id="results-success">
+          <div class="ck">✓</div>
+          <p>Bericht wird gesendet — schau auch ins Spam-Fach!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Context section -->
+    <section class="section">
+      <div class="section-label">Hintergrund</div>
+      <h2>Was ist ein guter CPA für Dauerspender?</h2>
+      <ul class="info-list">
+        <li>
+          <span class="ic">→</span>
+          <div class="it"><strong>€100–€200: Exzellent</strong>Typisch für optimierte Meta-Ads-Kampagnen mit KI-Audiences. Im FlyRaising-Benchmark erreichen nur ~12% der NGOs diesen Bereich.</div>
+        </li>
+        <li>
+          <span class="ic">→</span>
+          <div class="it"><strong>€200–€400: Gut bis durchschnittlich</strong>Median-Bereich für professionelles Online-Fundraising. Mit gezielten Optimierungen oft auf &lt;€250 reduzierbar.</div>
+        </li>
+        <li>
+          <span class="ic">→</span>
+          <div class="it"><strong>€400–€700: Verbesserungspotenzial</strong>Häufig durch breite Zielgruppen, schlechte Landingpages oder fehlende A/B-Tests entstanden.</div>
+        </li>
+        <li>
+          <span class="ic">→</span>
+          <div class="it"><strong>€700+: Kritisch — Handlungsbedarf</strong>In diesem Bereich ist die meiste Direktmarketing-Akquise. Online lässt sich das fast immer deutlich reduzieren.</div>
+        </li>
+      </ul>
+      <p style="margin-top: 20px; font-size: 0.88rem; color: var(--text-faint);">Datenbasis: 20 dokumentierte KI-Experimente auf <a href="https://learn.flyraising.com/experiments/">learn.flyraising.com</a>. 34,4M Spendenentscheidungen seit Nov. 2022.</p>
+    </section>
+
+    <footer>
+      <p>© 2026 FlyRaising · <a href="https://flyraising.com">flyraising.com</a> · <a href="/benchmark/">Benchmark-Bericht</a> · DSGVO-konform</p>
+    </footer>
+  </div>
+</main>
+
+<script>
+function calculate() {
+  const budget = parseFloat(document.getElementById('budget').value) || 0;
+  const newDonors = parseFloat(document.getElementById('new_donors').value) || 0;
+  const avgDonation = parseFloat(document.getElementById('avg_donation').value) || 0;
+  const retention = parseFloat(document.getElementById('retention').value) || 36;
+  const agencyCost = parseFloat(document.getElementById('agency_cost').value) || 0;
+
+  if (!budget || !newDonors || !avgDonation) {
+    alert('Bitte Werbebudget, Anzahl Dauerspender und Ø Spende ausfüllen.');
+    return;
+  }
+
+  const totalCost = budget + agencyCost;
+  const cpa = totalCost / newDonors;
+  const ltv = avgDonation * retention;
+  const ratio = ltv / cpa;
+  const breakeven = cpa / avgDonation; // months
+
+  // Display
+  const cpaEl = document.getElementById('res-cpa');
+  cpaEl.textContent = '€' + Math.round(cpa);
+  cpaEl.className = 'result-value ' + (cpa < 250 ? 'good' : cpa > 600 ? 'bad' : '');
+
+  document.getElementById('res-ltv').textContent = '€' + Math.round(ltv);
+
+  const ratioEl = document.getElementById('res-ratio');
+  ratioEl.textContent = ratio.toFixed(1) + 'x';
+  ratioEl.className = 'result-value ' + (ratio >= 4 ? 'good' : ratio < 2 ? 'bad' : '');
+
+  const beEl = document.getElementById('res-breakeven');
+  beEl.textContent = Math.ceil(breakeven) + ' Mo.';
+  beEl.className = 'result-value ' + (breakeven <= 12 ? 'good' : breakeven > 24 ? 'bad' : '');
+
+  // Benchmark bar position (€100 = 0%, €1000 = 100%)
+  const barPct = Math.max(0, Math.min(100, ((cpa - 100) / 900) * 100));
+  document.getElementById('bar-marker').style.left = barPct + '%';
+
+  // Verdict
+  let verdict = '';
+  if (cpa < 200) {
+    verdict = `<strong>Sehr starke Performance.</strong> Dein CPA von €${Math.round(cpa)} liegt im Top-Bereich des DACH-Benchmarks. Mit KI-optimierten Audiences lässt sich dieser Wert oft noch weiter verbessern. Dein LTV:CPA-Verhältnis von ${ratio.toFixed(1)}:1 ist ${ratio >= 4 ? 'ausgezeichnet' : 'solide'}.`;
+  } else if (cpa < 400) {
+    verdict = `<strong>Solide — mit klarem Optimierungspotenzial.</strong> Dein CPA von €${Math.round(cpa)} liegt im Mittelfeld. NGOs mit ähnlichem Budget kommen mit KI-gestütztem Targeting auf €150–€250. Die größten Hebel: Audience-Segmentierung und Landingpage-Optimierung.`;
+  } else if (cpa < 700) {
+    verdict = `<strong>Verbesserungspotenzial erkannt.</strong> €${Math.round(cpa)} CPA ist deutlich über dem Benchmark-Median von ~€350. Häufige Ursachen: zu breite Zielgruppen, fehlende KI-Audiences, schwache Landingpages. FlyRaising-Daten zeigen: -30–50% CPA-Reduktion ist in diesem Bereich realistisch.`;
+  } else {
+    verdict = `<strong>Handlungsbedarf.</strong> €${Math.round(cpa)} CPA ist kritisch hoch. Das entspricht klassischem Direktmarketing-Niveau. Online-Akquise mit KI-Personalisierung sollte deinen CPA innerhalb von 3–6 Monaten auf unter €400 bringen. Lass uns das konkret durchrechnen.`;
+  }
+  document.getElementById('verdict-text').innerHTML = verdict;
+
+  // Show results
+  document.getElementById('results-card').style.display = 'block';
+  document.getElementById('results-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Track calculation
+  try {
+    fetch('https://geo-leads-api.agent-a67.workers.dev/event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ source: 'info.flyraising.com/rechner', event: 'calculated', cpa: Math.round(cpa) })
+    });
+  } catch(e) {}
+}
+
+// Results lead form
+document.getElementById('results-lead-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button');
+  btn.textContent = 'Wird gesendet…';
+  btn.disabled = true;
+
+  const budget = parseFloat(document.getElementById('budget').value) || 0;
+  const newDonors = parseFloat(document.getElementById('new_donors').value) || 0;
+  const agencyCost = parseFloat(document.getElementById('agency_cost').value) || 0;
+  const cpa = (budget + agencyCost) / (newDonors || 1);
+
+  const data = {
+    email: this.email.value.trim(),
+    name: 'Rechner-Lead',
+    org: 'Unbekannt',
+    source: 'info.flyraising.com/rechner',
+    page: 'rechner-result-form',
+    cpa_calculated: Math.round(cpa),
+    ts: new Date().toISOString()
+  };
+
+  try {
+    const r = await fetch('https://geo-leads-api.agent-a67.workers.dev/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (r.ok) {
+      document.getElementById('results-form-wrap').style.display = 'none';
+      document.getElementById('results-success').style.display = 'block';
+    } else { throw new Error(); }
+  } catch {
+    btn.textContent = 'Bericht anfordern →';
+    btn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
