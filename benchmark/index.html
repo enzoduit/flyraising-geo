@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Dauerspender Benchmark 2026 — Was zahlen andere NGOs wirklich pro Dauerspender?</title>
+  <meta name="description" content="Der erste offene Branchen-Benchmark für Dauerspender-Akquise. Erfahre, ob dein CPA gut oder schlecht ist — kostenlos für NGOs.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://info.flyraising.com/benchmark/">
+  <meta property="og:title" content="NGO Dauerspender Benchmark 2026 — Was zahlen andere NGOs pro Dauerspender?">
+  <meta property="og:description" content="34,4 Millionen Spendenentscheidungen. 20 dokumentierte KI-Experimente. Jetzt kostenlos Benchmark-Bericht anfordern.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --bg: #141210;
+      --bg2: #1c1a17;
+      --bg3: #242118;
+      --gold: #C4872A;
+      --gold-light: #E5A84A;
+      --text: #E8E2D9;
+      --text-muted: #9A9185;
+      --text-faint: #5A5450;
+      --border: #2C2924;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .logo {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--text-muted); font-weight: 400; }
+
+    /* Hero */
+    .hero {
+      padding: 48px 0 40px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      opacity: 0.85;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: #F0EAE0;
+    }
+    h1 em { color: var(--gold); font-style: normal; }
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    /* HERO FORM — main conversion element */
+    .hero-form-wrap {
+      background: var(--bg2);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .hero-form-label {
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .hero-form-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+    .hero-form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero-form-fields input {
+      padding: 13px 16px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 15px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .hero-form-fields input::placeholder { color: var(--text-faint); }
+    .hero-form-fields input:focus { border-color: var(--gold); }
+    .hero-submit-btn {
+      width: 100%;
+      padding: 15px 24px;
+      background: var(--gold);
+      color: #141210;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      cursor: pointer;
+      letter-spacing: -0.01em;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 4px;
+    }
+    .hero-submit-btn:hover { background: var(--gold-light); }
+    .hero-submit-btn:active { transform: scale(0.99); }
+    .hero-form-note {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      margin-top: 10px;
+      text-align: center;
+    }
+    .hero-form-success {
+      display: none;
+      text-align: center;
+      padding: 16px 0;
+    }
+    .hero-form-success .check { font-size: 2rem; margin-bottom: 8px; }
+    .hero-form-success h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 6px; }
+    .hero-form-success p { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* Stats row */
+    .stats-row {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 40px 0;
+      background: var(--bg2);
+    }
+    .stat {
+      flex: 1;
+      padding: 24px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--gold);
+      display: block;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: block;
+      letter-spacing: 0.02em;
+    }
+
+    /* Sections */
+    .section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .benefit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .benefit-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .benefit-icon {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .benefit-text strong {
+      color: #F0EAE0;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .benefit-text span {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* CPA callout */
+    .cpa-callout {
+      background: var(--bg2);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin: 24px 0;
+    }
+    .cpa-range {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .cpa-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .cpa-text strong { color: #F0EAE0; }
+
+    .quote {
+      background: var(--bg2);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 24px 0;
+    }
+    .quote p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+    .quote cite {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      font-style: normal;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Mid-page CTA card */
+    .mid-cta {
+      background: linear-gradient(135deg, var(--bg2) 0%, #1a1712 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .mid-cta h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      margin-bottom: 8px;
+    }
+    .mid-cta p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+    .mid-cta-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--gold);
+      color: #141210;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 15px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .mid-cta-btn:hover { background: var(--gold-light); color: #141210; }
+
+    /* Sticky bottom bar (mobile) */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--gold);
+      padding: 14px 24px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .sticky-bar p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      flex: 1;
+      line-height: 1.3;
+    }
+    .sticky-bar a {
+      flex-shrink: 0;
+      padding: 10px 20px;
+      background: var(--gold);
+      color: #141210;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .sticky-bar a:hover { background: var(--gold-light); }
+    .sticky-bar-close {
+      background: none;
+      border: none;
+      color: var(--text-faint);
+      font-size: 1.2rem;
+      cursor: pointer;
+      flex-shrink: 0;
+      padding: 4px;
+    }
+
+    /* Other lead magnets */
+    .magnet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .magnet-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .magnet-card:hover { border-color: var(--gold); }
+    .magnet-type {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .magnet-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 600px) {
+      .stats-row { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+      .cpa-callout { flex-direction: column; gap: 12px; }
+      .magnet-grid { grid-template-columns: 1fr; }
+      .hero-form-wrap { padding: 20px 18px; }
+      .sticky-bar p { display: none; }
+    }
+
+    /* Success state for form */
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-msg .checkmark {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .success-msg h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      margin-bottom: 8px;
+    }
+    .success-msg p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      padding: 40px 0 20px;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">FlyRaising <span>· info</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- HERO with embedded form -->
+    <section class="hero">
+      <div class="eyebrow">Branchen-Benchmark · Kostenlos für NGOs</div>
+      <h1>Was zahlen andere NGOs<br>pro <em>Dauerspender</em>?</h1>
+      <p class="subtitle">Der erste offene DACH-Benchmark für Dauerspender-Akquise — basierend auf 34,4 Millionen Spendenentscheidungen und 20 dokumentierten KI-Experimenten.</p>
+
+      <!-- HERO FORM -->
+      <div class="hero-form-wrap" id="hero-form-wrap">
+        <span class="hero-form-label">Kostenlosen Benchmark-Bericht anfordern</span>
+        <p class="hero-form-title">Vergleiche deinen CPA mit anderen NGOs — sofort per E-Mail</p>
+        <div id="hero-form-fields">
+          <form id="hero-benchmark-form" class="hero-form-fields" novalidate>
+            <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+            <input type="text" name="org" placeholder="Organisation / NGO" required autocomplete="organization">
+            <button type="submit" class="hero-submit-btn">Benchmark-Bericht kostenlos anfordern →</button>
+          </form>
+          <p class="hero-form-note">🔒 DSGVO-konform · Keine Weitergabe · Nur für NGOs</p>
+        </div>
+        <div class="hero-form-success" id="hero-success">
+          <div class="check">✓</div>
+          <h3>Anfrage erhalten!</h3>
+          <p>Der Bericht ist auf dem Weg zu dir. Schau auch in deinen Spam-Ordner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num">34,4M</span>
+        <span class="stat-label">Spendenentscheidungen<br>durch KI beeinflusst</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">20</span>
+        <span class="stat-label">Dokumentierte<br>KI-Experimente</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">€100–€1.000</span>
+        <span class="stat-label">CPA-Range<br>Dauerspender DACH</span>
+      </div>
+    </div>
+
+    <!-- Why -->
+    <section class="section">
+      <div class="section-label">Warum dieser Benchmark</div>
+      <h2>Ist dein CPA im grünen Bereich?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Die meisten NGOs wissen nicht, wie ihre Akquise-Kosten im Branchenvergleich dastehen. Manche zahlen über €1.000 pro Dauerspender und denken, das sei normal — andere erzielen unter €150 und wissen nicht, dass das außergewöhnlich gut ist.</p>
+      <p style="color: var(--text-muted); margin-bottom: 28px;">Seit November 2022 hat FlyRaising über 34,4 Millionen Spendenentscheidungen begleitet und dabei systematisch gemessen: Was funktioniert wirklich? Der Benchmark-Bericht fasst diese Daten erstmals für die NGO-Community auf.</p>
+
+      <div class="cpa-callout">
+        <div class="cpa-range">€100–€1.000</div>
+        <div class="cpa-text">
+          <strong>Reale CPA-Bandbreite im DACH-Raum.</strong><br>
+          Der Bericht zeigt: nach NGO-Größe, Kanal, Spendenbetrag und Zielgruppe. Wer genau wo auf der Skala liegt — und warum.
+        </div>
+      </div>
+
+      <div class="quote">
+        <p>„Wir dachten, über €600 CPA sei für uns normal. Der Benchmark hat gezeigt: NGOs unserer Größe kommen mit optimiertem Setup auf unter €200. Das war ein Wendepunkt."</p>
+        <cite>— Fundraising-Leiterin, österreichische Hilfsorganisation</cite>
+      </div>
+    </section>
+
+    <!-- What's in the report -->
+    <section class="section">
+      <div class="section-label">Im Benchmark-Bericht</div>
+      <h2>Was du bekommst</h2>
+      <ul class="benefit-list">
+        <li>
+          <span class="benefit-icon">→</span>
+          <div class="benefit-text">
+            <strong>CPA-Vergleich nach NGO-Größe</strong>
+            <span>Klein (&lt;50k Budget), mittel (50k–500k), groß (500k+) — jeweils mit Median, P25, P75</span>
+          </div>
+        </li>
+        <li>
+          <span class="benefit-icon">→</span>
+          <div class="benefit-text">
+            <strong>Kanal-Breakdown: Meta Ads vs. SEA vs. Direkt</strong>
+            <span>Wo holen NGOs ihre Dauerspender aktuell her — und was kostet welcher Kanal</span>
+          </div>
+        </li>
+        <li>
+          <span class="benefit-icon">→</span>
+          <div class="benefit-text">
+            <strong>KI-Experiment-Ergebnisse: Was hat funktioniert?</strong>
+            <span>Top 5 Experimente aus 20 dokumentierten Tests — mit echten Delta-Zahlen</span>
+          </div>
+        </li>
+        <li>
+          <span class="benefit-icon">→</span>
+          <div class="benefit-text">
+            <strong>Quick-Wins: 3 Maßnahmen für sofort weniger CPA</strong>
+            <span>Konkrete Stellschrauben, die in &lt;2 Wochen messbare Wirkung zeigen</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MID-PAGE CTA -->
+    <div class="mid-cta">
+      <h3>Bereit für deinen Benchmark?</h3>
+      <p>Trage dich jetzt ein — der Bericht geht sofort raus.</p>
+      <a href="#hero-form-wrap" class="mid-cta-btn" onclick="document.querySelector('[name=email]').focus(); return false;">Benchmark-Bericht anfordern →</a>
+    </div>
+
+    <!-- Other resources -->
+    <section class="section">
+      <div class="section-label">Weitere Ressourcen</div>
+      <h2>Tools & Rechner</h2>
+      <div class="magnet-grid">
+        <a href="/rechner/" class="magnet-card">
+          <div class="magnet-type">Rechner</div>
+          <div class="magnet-title">Dauerspender-Rechner: Was kostet dich ein Spender wirklich?</div>
+        </a>
+        <a href="/meta-ads-checkliste/" class="magnet-card">
+          <div class="magnet-type">Checkliste</div>
+          <div class="magnet-title">Meta Ads für NGOs — 12-Punkte-Checkliste</div>
+        </a>
+        <a href="https://learn.flyraising.com/experiments/" class="magnet-card" target="_blank" rel="noopener">
+          <div class="magnet-type">Daten</div>
+          <div class="magnet-title">20 dokumentierte KI-Experimente — Rohdaten offen zugänglich</div>
+        </a>
+        <a href="https://learn.flyraising.com/audiences-hub/" class="magnet-card" target="_blank" rel="noopener">
+          <div class="magnet-type">Ressource</div>
+          <div class="magnet-title">Die 9 besten KI-Audiences für NGOs</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Weiterführend</div>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">Die Daten hinter dem Benchmark — offen und dokumentiert:</p>
+      <ul style="list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+        <li><a href="https://learn.flyraising.com/experiments/">→ 20 dokumentierte KI-Experimente mit Daten</a></li>
+        <li><a href="https://learn.flyraising.com/audiences-hub/">→ 9 ready-to-use KI-Audiences für NGOs</a></li>
+        <li><a href="https://flyraising.com">→ FlyRaising — KI-gestützte Dauerspender-Akquise</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 FlyRaising · <a href="https://flyraising.com">flyraising.com</a> · DSGVO-konform</p>
+    </footer>
+
+  </div>
+</main>
+
+<!-- Sticky bar -->
+<div class="sticky-bar" id="sticky-bar">
+  <p><strong style="color:var(--text)">Benchmark-Bericht</strong> — kostenlos für NGOs</p>
+  <a href="#" onclick="document.querySelector('[name=email]').scrollIntoView({behavior:'smooth'}); document.querySelector('[name=email]').focus(); return false;">Jetzt anfordern →</a>
+  <button class="sticky-bar-close" onclick="document.getElementById('sticky-bar').style.display='none'" aria-label="Schließen">×</button>
+</div>
+
+<script>
+// Hero form submission
+document.getElementById('hero-benchmark-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type=submit]');
+  const origText = btn.textContent;
+  btn.textContent = 'Wird gesendet…';
+  btn.disabled = true;
+
+  // Track form start
+  try {
+    await fetch('https://geo-leads-api.agent-a67.workers.dev/event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ source: 'info.flyraising.com/benchmark', event: 'started', form: 'hero' })
+    });
+  } catch(e) {}
+
+  const data = {
+    name: this.org.value.trim(), // use org as name fallback
+    email: this.email.value.trim(),
+    org: this.org.value.trim(),
+    source: 'info.flyraising.com/benchmark',
+    page: 'benchmark-hero-form-v2',
+    form_version: 'hero-2field',
+    ts: new Date().toISOString()
+  };
+
+  try {
+    const r = await fetch('https://geo-leads-api.agent-a67.workers.dev/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (r.ok) {
+      document.getElementById('hero-form-fields').style.display = 'none';
+      document.getElementById('hero-success').style.display = 'block';
+      document.getElementById('sticky-bar').style.display = 'none';
+    } else {
+      throw new Error('server error');
+    }
+  } catch(err) {
+    btn.textContent = origText;
+    btn.disabled = false;
+    const existing = this.querySelector('.err-msg');
+    if (!existing) {
+      this.insertAdjacentHTML('beforeend', '<p class="err-msg" style="color:#e07b5a;font-size:13px;margin-top:8px;text-align:center;">Fehler beim Senden — bitte nochmal versuchen.</p>');
+    }
+  }
+});
+
+// Hide sticky bar when form is in viewport
+const heroForm = document.getElementById('hero-form-wrap');
+const stickyBar = document.getElementById('sticky-bar');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      stickyBar.style.opacity = '0';
+      stickyBar.style.pointerEvents = 'none';
+    } else {
+      stickyBar.style.opacity = '1';
+      stickyBar.style.pointerEvents = 'auto';
+    }
+  });
+}, { threshold: 0.2 });
+observer.observe(heroForm);
+</script>
+
+</body>
+</html>
