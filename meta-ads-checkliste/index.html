@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Ads Checkliste für NGOs — 12 Punkte für mehr Dauerspender | FlyRaising</title>
+  <meta name="description" content="Die 12-Punkte Meta Ads Checkliste für NGOs: Von Targeting über Creative bis Attribution — alles was du vor dem ersten Euro brauchst.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://info.flyraising.com/meta-ads-checkliste/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #141210; --bg2: #1c1a17; --bg3: #242118;
+      --gold: #C4872A; --gold-light: #E5A84A;
+      --text: #E8E2D9; --text-muted: #9A9185; --text-faint: #5A5450;
+      --border: #2C2924;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-size: 16px; line-height: 1.7; padding-bottom: 60px; }
+    a { color: var(--gold); text-decoration: none; }
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+    header { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .logo { color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+    .logo span { color: var(--text-muted); font-weight: 400; }
+
+    .hero { padding: 48px 0 32px; text-align: center; }
+    .eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.73rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 18px; padding: 5px 12px; border: 1px solid var(--gold); border-radius: 4px; opacity: 0.85; }
+    h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 14px; color: #F0EAE0; }
+    h1 em { color: var(--gold); font-style: normal; }
+    .subtitle { font-size: 1rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 28px; line-height: 1.6; }
+
+    /* Checklist */
+    .checklist-section { margin: 32px 0; }
+    .checklist-group { margin-bottom: 32px; }
+    .group-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; padding: 6px 12px; background: var(--bg2); border-left: 3px solid var(--gold); display: inline-block; }
+    .checklist-item { display: flex; gap: 14px; padding: 16px 18px; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; align-items: flex-start; cursor: pointer; transition: border-color 0.2s; }
+    .checklist-item:hover { border-color: var(--gold); }
+    .checklist-item.checked { border-color: #4CAF5044; background: #4CAF5008; }
+    .check-box { width: 22px; height: 22px; border: 2px solid var(--border); border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; transition: all 0.2s; margin-top: 2px; }
+    .checklist-item.checked .check-box { background: #4CAF50; border-color: #4CAF50; color: white; }
+    .item-content strong { display: block; font-size: 0.95rem; color: #F0EAE0; margin-bottom: 4px; }
+    .item-content span { font-size: 0.82rem; color: var(--text-faint); line-height: 1.5; }
+    .item-content .tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+    .tag-critical { background: #E5534B22; color: #E5534B; border: 1px solid #E5534B33; }
+    .tag-quick-win { background: #C4872A22; color: var(--gold); border: 1px solid #C4872A33; }
+
+    /* Progress */
+    .progress-bar { margin: 24px 0; }
+    .progress-label { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-faint); margin-bottom: 8px; }
+    .progress-track { height: 8px; background: var(--bg3); border-radius: 4px; }
+    .progress-fill { height: 100%; background: var(--gold); border-radius: 4px; transition: width 0.3s; }
+
+    /* Lead form */
+    .lead-card { background: var(--bg2); border: 2px solid var(--gold); border-radius: 16px; padding: 28px; margin: 32px 0; text-align: center; }
+    .lead-card h2 { font-size: 1.1rem; font-weight: 700; color: #F0EAE0; margin-bottom: 8px; }
+    .lead-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; }
+    .lead-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+    .lead-form input { flex: 1; padding: 12px 14px; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif; outline: none; }
+    .lead-form input:focus { border-color: var(--gold); }
+    .lead-form button { padding: 12px 18px; background: var(--gold); color: #141210; border: none; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .lead-form button:hover { background: var(--gold-light); }
+    .form-note-sm { font-size: 0.72rem; color: var(--text-faint); margin-top: 10px; }
+    .lead-success { display: none; text-align: center; padding: 8px 0; }
+    .lead-success .ck { font-size: 2rem; color: var(--gold); }
+    .lead-success p { font-size: 0.9rem; color: var(--text-muted); margin-top: 6px; }
+
+    .section { padding: 36px 0; border-top: 1px solid var(--border); }
+    footer { padding: 28px 0 16px; border-top: 1px solid var(--border); }
+    footer p { font-size: 0.78rem; color: var(--text-faint); }
+
+    @media (max-width: 500px) {
+      .lead-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">FlyRaising <span>· info</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="hero">
+      <div class="eyebrow">Checkliste · Meta Ads für NGOs</div>
+      <h1><em>12 Punkte</em> bevor du einen<br>Euro für Meta Ads ausgibst</h1>
+      <p class="subtitle">Basierend auf 20 dokumentierten KI-Experimenten und 34,4 Millionen Spendenentscheidungen — was NGOs wirklich brauchen, bevor sie ihre erste Kampagne schalten.</p>
+    </section>
+
+    <!-- Progress tracker -->
+    <div class="progress-bar">
+      <div class="progress-label">
+        <span>Dein Fortschritt</span>
+        <span id="progress-count">0 / 12</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+
+      <!-- Group 1: Setup -->
+      <div class="checklist-group">
+        <div class="group-label">1 — Technisches Setup</div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Meta Pixel korrekt installiert <span class="tag tag-critical">Kritisch</span></strong>
+            <span>Pixel auf allen Seiten des Donation-Funnels aktiv. Events: PageView, Lead, Donate feuern korrekt. Ohne das ist jede Kampagne blind.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Conversions API (CAPI) eingerichtet <span class="tag tag-critical">Kritisch</span></strong>
+            <span>Server-side-Tracking als Backup zum Browser-Pixel. Pflicht seit iOS14+ für korrekte Attribution. Verbesserung der gemessenen Conversions oft +30%.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Gemeinnützigkeits-Status bei Meta beantragt</strong>
+            <span>NGOs bekommen 20–25% Rabatt auf Werbeausgaben über Facebook Ads for Social Good. Beantragung dauert 2–4 Wochen — früh anfangen.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Audience -->
+      <div class="checklist-group">
+        <div class="group-label">2 — Zielgruppen</div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Custom Audience aus bestehenden Spendern <span class="tag tag-critical">Kritisch</span></strong>
+            <span>Lade deine existierende Spenderdatenbank als Custom Audience hoch. Das ist die Basis für Lookalike Audiences — ohne das fischst du im Trüben.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Lookalike Audience 1–2% erstellt <span class="tag tag-quick-win">Quick Win</span></strong>
+            <span>1% Lookalike aus Dauerspender-Custom-Audience. In FlyRaising-Experimenten der stärkste einzelne Hebel: durchschnittlich -34% CPA vs. Interest-Targeting.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Retargeting-Audience (Website-Besucher 30 Tage)</strong>
+            <span>Separate Kampagne für Menschen, die bereits die Spendenpage besucht haben. Conversion-Rate 3–8x höher als Cold-Audiences.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Ausschlüsse definiert: Bestehende Dauerspender</strong>
+            <span>Bestehende Dauerspender aus allen Kampagnen ausschließen. Verhindert Budgetverschwendung und verbessert CPA-Reporting erheblich.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Creative -->
+      <div class="checklist-group">
+        <div class="group-label">3 — Creative & Messaging</div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Mindestens 3 Creative-Varianten pro Adset <span class="tag tag-quick-win">Quick Win</span></strong>
+            <span>Video vs. Foto vs. Carousel testen. Meta-Algorithmus optimiert automatisch auf die beste Variante. Faustregel: 3 Creatives, 2 Headlines, 2 Texte.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Monatlicher Betrag prominent im Creative</strong>
+            <span>Zeige den konkreten Monatsbetrag (z.B. "Schon ab €10/Monat"). FlyRaising-Daten: Creatives mit explizitem Betrag haben 28% höhere CTR auf Dauerspenden-Angebote.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Mobile-optimierte Landingpage</strong>
+            <span>80%+ des Meta-Traffics kommt vom Handy. Ladezeit unter 3 Sekunden. Formular maximal 3 Felder. Scroll-Tiefe bis CTA nicht mehr als 2 Screens.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 4: Measurement -->
+      <div class="checklist-group">
+        <div class="group-label">4 — Messung & Attribution</div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Attribution Window korrekt eingestellt <span class="tag tag-critical">Kritisch</span></strong>
+            <span>7-Tage-Klick + 1-Tage-View für Dauerspenden. Längere Windows überschätzen die Kampagnen-Performance. Vergleich mit tatsächlichen Neuspender-Zahlen aus CRM monatlich.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>UTM-Parameter auf allen Landingpage-Links</strong>
+            <span>utm_source=facebook, utm_medium=paid, utm_campaign=[Kampagnenname]. Ermöglicht LTV-Tracking pro Kampagne in deinem CRM — nicht nur CPA, sondern Retention.</span>
+          </div>
+        </div>
+
+        <div class="checklist-item" onclick="toggle(this)">
+          <div class="check-box"></div>
+          <div class="item-content">
+            <strong>Budget-Minimum für statistisch valide Daten</strong>
+            <span>Mind. €500/Monat für erste valide Daten. Unter €200/Monat: Meta-Algorithmus lernt nicht. Faustregel: Budget sollte ~50x dein angestrebtes CPA-Ziel betragen.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Lead capture -->
+    <div class="lead-card">
+      <h2>Vollständiger Benchmark: Was zahlen andere NGOs pro Dauerspender?</h2>
+      <p>Erhalte den kostenlosen Benchmark-Bericht — inkl. CPA-Vergleich nach NGO-Größe, Kanal und KI-Experiment-Ergebnissen.</p>
+      <div id="lead-form-wrap">
+        <form id="checklist-lead-form" class="lead-form" novalidate>
+          <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+          <button type="submit">Benchmark anfordern →</button>
+        </form>
+        <p class="form-note-sm">🔒 DSGVO-konform · Keine Weitergabe · Kostenlos</p>
+      </div>
+      <div class="lead-success" id="lead-success">
+        <div class="ck">✓</div>
+        <p>Bericht kommt gleich — schau auch ins Spam-Fach!</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <p style="font-size: 0.82rem; color: var(--text-faint);">
+        Weitere Tools: <a href="/rechner/">Dauerspender-Rechner</a> · <a href="/benchmark/">Benchmark-Bericht</a> · <a href="https://learn.flyraising.com/experiments/">KI-Experimente</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2026 FlyRaising · <a href="https://flyraising.com">flyraising.com</a> · DSGVO-konform</p>
+    </footer>
+  </div>
+</main>
+
+<script>
+let checked = 0;
+const total = 12;
+
+function toggle(el) {
+  el.classList.toggle('checked');
+  const isChecked = el.classList.contains('checked');
+  el.querySelector('.check-box').textContent = isChecked ? '✓' : '';
+  checked += isChecked ? 1 : -1;
+  const pct = (checked / total) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-count').textContent = checked + ' / ' + total;
+}
+
+document.getElementById('checklist-lead-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button');
+  btn.textContent = 'Wird gesendet…';
+  btn.disabled = true;
+
+  const data = {
+    email: this.email.value.trim(),
+    name: 'Checkliste-Lead',
+    org: 'Unbekannt',
+    source: 'info.flyraising.com/meta-ads-checkliste',
+    page: 'meta-ads-checkliste-lead-form',
+    checklist_progress: checked + '/' + total,
+    ts: new Date().toISOString()
+  };
+
+  try {
+    const r = await fetch('https://geo-leads-api.agent-a67.workers.dev/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (r.ok) {
+      document.getElementById('lead-form-wrap').style.display = 'none';
+      document.getElementById('lead-success').style.display = 'block';
+    } else { throw new Error(); }
+  } catch {
+    btn.textContent = 'Benchmark anfordern →';
+    btn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
