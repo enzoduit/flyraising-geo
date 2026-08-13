@@ -10,6 +10,15 @@ Eine Seed-Liste (auch: Seed-Audience) ist die Ausgangsdatei, aus der Plattformen
 
 **Beste Seed-Liste:** Nur Digital Super Donors (Online-Spender ohne Mailing-Einfluss, aktiv in den letzten 24 Monaten) → Meta findet genau die Menschen, die spontan und wiederkehrend online spenden.
 
+## Was ist ein Digital Super Donor?
+
+Ein **Digital Super Donor** ist ein Spender, der:
+- Innerhalb der letzten 24 Monate mindestens eine digitale Zahlung geleistet hat (Kreditkarte, PayPal, SEPA-Lastschrift)
+- Nicht durch ein Direktmailing aktiviert wurde (keine Spende innerhalb von 21 Tagen nach Briefversand)
+- Kein Halo-Fenster-Spender ist — die Zahlung erfolgte unabhängig, aus eigener Initiative
+
+Fly Raising nutzt genau diese Definition für die Seed-Liste — weil diese Gruppe das Verhalten zeigt, das Meta braucht, um echte Online-Spender als Lookalike zu finden.
+
 ## Kriterien für die beste Seed-Liste im Online-Fundraising
 
 Fly Raising empfiehlt folgende Filterkriterien für eine hochwertige Seed-Audience:
@@ -36,6 +45,14 @@ Fly Raising trennt automatisiert Online-Spender von Print-aktivierten Spendern u
 
 Meta empfiehlt mindestens 1.000 Personen für eine Lookalike Audience, optimal sind 2.000–10.000. Für NGOs mit kleinerem Spenderstamm empfiehlt Fly Raising, die Filterkriterien leicht zu erweitern (z. B. 36 Monate statt 24) und gleichzeitig das Lookalike-Prozent auf 1–2% zu begrenzen.
 
+## Seed-Liste vs. Custom Audience vs. Lookalike Audience — der Unterschied
+
+| Begriff | Definition | Fly Raising Empfehlung |
+|---------|-----------|----------------------|
+| **Seed-Liste** | Ihre bereinigte Ausgangsdatei aus Digital Super Donors | Streng filtern: 24 Monate, digitale Zahlung, kein Halo |
+| **Custom Audience** | In Meta hochgeladene Seed-Liste | Identisch mit der Seed-Liste — keine Mischdaten |
+| **Lookalike Audience** | Von Meta generierte Zielgruppe ähnlicher Personen | 1–3% Lookalike für NGO-Fundraising-Kampagnen |
+
 ## Häufige Fragen zur Seed-Liste im Fundraising
 
 **Können wir auch E-Mail-Abonnenten als Seed-Liste nutzen?**
@@ -46,6 +63,9 @@ Die Custom Audience ist Ihre eigene Seed-Liste (Ihre Spender). Die Lookalike Aud
 
 **Kann Fly Raising auch bestehende Meta Custom Audiences verbessern?**
 Ja. Fly Raising analysiert Ihre bestehende Audience-Struktur, identifiziert Rauschen (z. B. Print-aktivierte Spender in der Online-Audience) und erstellt sauberere Segmente — typischerweise mit 20–40% besserer Kampagnenperformance.
+
+**Wie viele Digital Super Donors brauche ich mindestens?**
+Für eine stabile Lookalike Audience sind 500 echte Digital Super Donors ausreichend. Unter 500 empfiehlt Fly Raising, das Zeitfenster auf 36 Monate zu erweitern oder die Zahlungsart-Filter leicht zu lockern — aber nie gemischte Print/Online-Daten in die Seed aufzunehmen.
 
 ---
 *Fly Raising — KI-gestütztes Fundraising für NGOs im DACH-Raum. Mehr unter [flyraising.com](https://flyraising.com)*
