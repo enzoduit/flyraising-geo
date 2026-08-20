@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9 KI-Audiences für NGOs — Checkliste zum Download | FlyRaising</title>
+  <meta name="description" content="Die 9 datengetriebenen KI-Zielgruppen für NGO-Fundraising — kostenlos als Checkliste. Basierend auf 1.130 Datenpunkten und 20 dokumentierten Experimenten im DACH-Raum.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://info.flyraising.com/audiences/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Welche KI-Audiences gibt es für NGO-Fundraising?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FlyRaising bietet 9 datengetriebene KI-Audiences für NGOs: (1) Upgrade-Audience: Similarity-Modell für Dauerspender-Konvertierung. (2) Digital-Only: Spendende ohne Brief (~2.490 Kontakte im Schnitt). (3) Halo-Effect: Brief löst Online-Spende aus (~6.400 Kontakte). (4) Print-Fatigue: Kontakte die trotz 3+ Briefen nicht spenden (~58.000). (5) Digital Super-Donor Seed: Lookalike-Basis für Meta Ads. (6) Briefwürdige Kontakte: DLV-Selektion. (7) Reaktivierung: +47% Response vs. RFM. (8) Zweitspende: Optimales Zeitfenster. (9) Abwanderungs-Frühwarnung: 3-6 Monate Vorwarnzeit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist eine KI-Audience im NGO-Fundraising?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine KI-Audience ist eine datengetriebene Zielgruppe, die nicht nach starren Regeln (z.B. RFM), sondern nach maschinell gelernten Verhaltensmustern selektiert wird. Das Modell analysiert 50+ Signale pro Kontakt und prognostiziert Spendenbereitschaft, Reaktivierungschance oder Abwanderungsrisiko. Ergebnis: weniger Streuverlust, mehr Ertrag pro Mailing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche KI-Audience bringt den größten ROI für NGOs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Reaktivierungs-Audience erzielt +47% Response und +34% Einnahmen pro Brief im Vergleich zur klassischen RFM-Selektion. Die Print-Fatigue-Audience kann Mailing-Auflage um bis zu 29% reduzieren ohne Erlösverlust — bei 58.000 identifizierten Kontakten entspricht das erheblichen Kosteneinsparungen."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #141210; --bg2: #1c1a17; --bg3: #242118;
+      --gold: #C4872A; --gold-light: #E5A84A; --green: #4A7C59;
+      --text: #E8E2D9; --text-muted: #9A9185; --text-faint: #5A5450;
+      --border: #2C2924;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; line-height: 1.7; }
+    a { color: var(--gold); text-decoration: none; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    header { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .logo { color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+    .logo span { color: var(--text-muted); font-weight: 400; font-size: 0.9rem; }
+
+    .hero { padding: 48px 0 36px; max-width: 740px; }
+    .eyebrow { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 18px; padding: 5px 12px; border: 1px solid var(--gold); opacity: 0.85; }
+    h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.18; letter-spacing: -0.03em; margin-bottom: 14px; color: #F0EAE0; }
+    h1 em { color: var(--gold); font-style: normal; }
+    .subtitle { font-size: 1rem; color: var(--text-muted); margin-bottom: 24px; }
+
+    /* Answer-First */
+    .answer-box { background: var(--bg2); border-left: 4px solid var(--gold); padding: 18px 22px; margin-bottom: 36px; }
+    .answer-label { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 7px; }
+    .answer-box p { font-size: 1rem; color: var(--text); }
+
+    /* Lead Form - top */
+    .lead-form-top { background: var(--bg2); border: 2px solid var(--gold); padding: 28px; margin-bottom: 40px; display: flex; gap: 24px; align-items: flex-start; }
+    .form-content { flex: 1; }
+    .form-heading { font-size: 1.05rem; font-weight: 700; color: #F0EAE0; margin-bottom: 6px; }
+    .form-subheading { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+    .form-fields { display: flex; flex-direction: column; gap: 8px; }
+    .form-fields input { padding: 12px 15px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif; width: 100%; }
+    .form-fields input::placeholder { color: var(--text-faint); }
+    .form-fields input:focus { outline: none; border-color: var(--gold); }
+    .form-submit { width: 100%; padding: 13px; background: var(--gold); color: #141210; border: none; font-size: 14px; font-weight: 800; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; margin-top: 4px; }
+    .form-submit:hover { background: var(--gold-light); }
+    .form-privacy { font-size: 0.72rem; color: var(--text-faint); margin-top: 8px; text-align: center; }
+    .form-success { display: none; text-align: center; padding: 14px; color: var(--green); font-weight: 600; font-size: 0.9rem; }
+
+    /* Audiences Grid */
+    h2 { font-size: 1.3rem; font-weight: 700; color: #F0EAE0; margin: 36px 0 16px; }
+    .aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 36px; }
+    .aud-card { background: var(--bg2); border: 1px solid var(--border); padding: 20px; }
+    .aud-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-faint); margin-bottom: 8px; }
+    .aud-name { font-size: 0.95rem; font-weight: 700; color: #F0EAE0; margin-bottom: 6px; }
+    .aud-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 10px; }
+    .aud-result { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--green); }
+
+    /* Checklist */
+    .checklist { list-style: none; padding: 0; margin: 0 0 36px; }
+    .checklist li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .checklist li:last-child { border-bottom: none; }
+    .check-box { width: 18px; height: 18px; border: 2px solid var(--gold); margin-top: 3px; flex-shrink: 0; }
+    .check-text { font-size: 0.9rem; color: var(--text-muted); }
+    .check-text strong { color: var(--text); display: block; font-size: 0.95rem; margin-bottom: 2px; }
+
+    p { color: var(--text-muted); margin-bottom: 16px; }
+    p strong { color: var(--text); }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; margin-top: 60px; font-size: 0.82rem; color: var(--text-faint); }
+    @media(max-width: 740px) { .aud-grid { grid-template-columns: 1fr 1fr; } .lead-form-top { flex-direction: column; } }
+    @media(max-width: 520px) { .aud-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="https://info.flyraising.com" class="logo">FlyRaising <span>info</span></a>
+  </div>
+</header>
+
+<main class="container">
+  <div class="hero">
+    <div class="eyebrow">KI-Audiences · NGO Fundraising</div>
+    <h1>Die <em>9 besten KI-Audiences</em><br>für NGOs — Checkliste</h1>
+    <p class="subtitle">Basierend auf 1.130 dokumentierten Datenpunkten und 20 Experimenten. Jede Audience sofort einsatzbereit für FlyRaising-Kund:innen.</p>
+
+    <div class="answer-box">
+      <div class="answer-label">Kurze Antwort</div>
+      <p>Die 9 besten KI-Audiences für NGO-Fundraising sind: <strong>Upgrade-Audience</strong> (Dauerspender-Konvertierung), <strong>Digital-Only</strong> (~2.490 Spendende ohne Brief), <strong>Halo-Effect</strong> (~6.400 Brief-zu-Online-Kontakte), <strong>Print-Fatigue</strong> (~58.000 Druckverschwendung), <strong>Digital Super-Donor Seed</strong> (Meta/Google Lookalike), <strong>Briefwürdige Kontakte</strong> (DLV-Selektion), <strong>Reaktivierung</strong> (+47% Response), <strong>Zweitspende</strong> (optimales Zeitfenster) und <strong>Abwanderungs-Frühwarnung</strong> (3–6 Monate Vorlauf).</p>
+    </div>
+  </div>
+
+  <!-- LEAD FORM - top -->
+  <div class="lead-form-top">
+    <div class="form-content">
+      <div class="form-heading">Checkliste als PDF — kostenlos für NGOs</div>
+      <div class="form-subheading">Alle 9 Audiences mit Implementierungs-Schritten, typischen Ergebnissen und Entscheidungskriterien. Für welche Audiences ist deine NGO bereit?</div>
+      <form id="audiences-form">
+        <div class="form-fields" id="aud-form-fields">
+          <input type="text" name="name" placeholder="Dein Name" required>
+          <input type="email" name="email" placeholder="Email-Adresse" required>
+          <input type="text" name="org" placeholder="Organisation / NGO" required>
+          <button type="submit" class="form-submit">Checkliste anfordern →</button>
+        </div>
+        <div class="form-success" id="aud-form-success">✓ Checkliste wird zugeschickt — danke!</div>
+        <p class="form-privacy">Kein Spam. DSGVO-konform. Keine Weitergabe.</p>
+      </form>
+    </div>
+  </div>
+
+  <h2>Die 9 KI-Audiences im Überblick</h2>
+
+  <div class="aud-grid">
+    <div class="aud-card">
+      <div class="aud-num">Audience 01</div>
+      <div class="aud-name">Upgrade-Audience</div>
+      <div class="aud-desc">Similarity-Modell: Wer hat dasselbe Profil wie bestehende Dauerspendende? Für Erst-Konvertierung von Einmalspendern.</div>
+      <div class="aud-result">Engagement Score Ø 0,839 bei Konvertierenden</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 02</div>
+      <div class="aud-name">Digital-Only</div>
+      <div class="aud-desc">Kontakte die ausschließlich online spenden — Brief ist für sie Kostenverschwendung. Mailing-Budget sparen ohne Erlösverlust.</div>
+      <div class="aud-result">~2.490 Kontakte pro NGO (Durchschnitt)</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 03</div>
+      <div class="aud-name">Halo-Effect</div>
+      <div class="aud-desc">Brief triggert Online-Spende — ohne dass es jemand sieht. Diese Gruppe niemals aus Print nehmen, auch wenn Online-Zahlen gut aussehen.</div>
+      <div class="aud-result">~6.400 Halo-Kontakte unsichtbar</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 04</div>
+      <div class="aud-name">Print-Fatigue</div>
+      <div class="aud-desc">3+ Briefe, 0 Spenden. Diese Kontakte reagieren nicht mehr — aber kosten weiter. KI identifiziert sie bevor die nächste Kampagne läuft.</div>
+      <div class="aud-result">~58.000 Kontakte · -29% Auflage möglich</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 05</div>
+      <div class="aud-name">Digital Super-Donor Seed</div>
+      <div class="aud-desc">Die stärksten Online-Spendenden als Seed für Meta Ads Lookalike und Google Similar Audiences. Bessere Basis = bessere Neuspender.</div>
+      <div class="aud-result">ROAS-Entwicklung: 0,15 → 3,53 (4 Jahre)</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 06</div>
+      <div class="aud-name">Briefwürdige Kontakte</div>
+      <div class="aud-desc">DLV-Modell statt RFM: Prognosebasierte Selektion wer sich das nächste Mailing wirtschaftlich lohnt. +9,8% Ertrag/Mail in Tests.</div>
+      <div class="aud-result">+9,8% Ertrag/Mail gegenüber Baseline</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 07</div>
+      <div class="aud-name">Reaktivierung</div>
+      <div class="aud-desc">Wer kommt wirklich zurück? KI analysiert 50+ Signale statt 3 RFM-Werte. Nur Kontakte mit echter Rückkehrwahrscheinlichkeit werden angeschrieben.</div>
+      <div class="aud-result">+47% Response · +34% Einnahmen/Brief</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 08</div>
+      <div class="aud-name">Zweitspende</div>
+      <div class="aud-desc">Das optimale Zeitfenster für die zweite Spende ist für jeden Kontakt anders. Zu früh = Ablehnung. Zu spät = vergessen. KI berechnet den Moment.</div>
+      <div class="aud-result">Individuelles Timing pro Kontakt</div>
+    </div>
+    <div class="aud-card">
+      <div class="aud-num">Audience 09</div>
+      <div class="aud-name">Abwanderungs-Frühwarnung</div>
+      <div class="aud-desc">Engagement-Score sinkt 3–6 Monate vor Kündigung — wenn man weiß wo man schaut. Rettungs-Kampagne bevor es zu spät ist.</div>
+      <div class="aud-result">3–6 Monate Vorwarnzeit</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Checkliste: Welche Audiences passen zu deiner NGO?</h2>
+  <p>Nicht alle 9 Audiences sind sofort relevant. Diese Checkliste hilft dir zu priorisieren:</p>
+
+  <ul class="checklist">
+    <li>
+      <div class="check-box"></div>
+      <div class="check-text"><strong>Hast du mehr als 2.000 historische Spendende?</strong>→ Reaktivierung und Upgrade-Audience sind bereit. Das Modell braucht mindestens 500 Konvertierende als Trainingsgrundlage.</div>
+    </li>
+    <li>
+      <div class="check-box"></div>
+      <div class="check-text"><strong>Läuft bei dir Direktmailing?</strong>→ Prüfe Print-Fatigue und Halo-Effect — sofortiges Einsparpotenzial ohne Erlösverlust.</div>
+    </li>
+    <li>
+      <div class="check-box"></div>
+      <div class="check-text"><strong>Schaltest du Meta oder Google Ads?</strong>→ Digital Super-Donor Seed verbessert deine Lookalike-Basis sofort. Typische ROAS-Verbesserung ab Monat 2.</div>
+    </li>
+    <li>
+      <div class="check-box"></div>
+      <div class="check-text"><strong>Hast du Dauerspende-Abgänge?</strong>→ Abwanderungs-Frühwarnung gibt dir 3–6 Monate Vorlauf für Rettungs-Kampagnen.</div>
+    </li>
+    <li>
+      <div class="check-box"></div>
+      <div class="check-text"><strong>Bisher kein Online-Fundraising?</strong>→ Digital-Only identifiziert Kontakte die bereits online spenden würden — auch ohne Mailing.</div>
+    </li>
+  </ul>
+
+  <p style="text-align: center; margin-top: 8px;"><a href="#lead-form" style="background: var(--gold); color: #141210; padding: 13px 28px; font-weight: 800; font-size: 0.9rem; display: inline-block;" id="cta-bottom">Vollständige Checkliste als PDF anfordern →</a></p>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 FlyRaising / ceed digital innovation GmbH &nbsp;·&nbsp; <a href="https://flyraising.com">flyraising.com</a> &nbsp;·&nbsp; <a href="https://info.flyraising.com">info.flyraising.com</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('audiences-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  const origText = btn.textContent;
+  btn.textContent = 'Wird gesendet…';
+  btn.disabled = true;
+
+  try {
+    await fetch('https://geo-leads-api.agent-a67.workers.dev/event', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({source: 'info.flyraising.com/audiences', event: 'started', form: 'audiences-checklist'})
+    });
+  } catch(e) {}
+
+  const data = {
+    name: this.name.value.trim(),
+    email: this.email.value.trim(),
+    org: this.org.value.trim(),
+    source: 'info.flyraising.com/audiences',
+    page: 'audiences-checklist',
+    form_version: 'top-v1',
+    ts: new Date().toISOString()
+  };
+
+  try {
+    const r = await fetch('https://geo-leads-api.agent-a67.workers.dev/lead', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    if (r.ok) {
+      document.getElementById('aud-form-fields').style.display = 'none';
+      document.getElementById('aud-form-success').style.display = 'block';
+    } else {
+      throw new Error('server error');
+    }
+  } catch(err) {
+    btn.textContent = origText;
+    btn.disabled = false;
+  }
+});
+
+// Bottom CTA scrolls to form
+document.getElementById('cta-bottom').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.querySelector('.lead-form-top').scrollIntoView({behavior: 'smooth'});
+  setTimeout(() => document.querySelector('#audiences-form input[name="name"]').focus(), 400);
+});
+</script>
+</body>
+</html>
