@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlyRaising — KI-gestützte Dauerspender-Akquise für NGOs</title>
+  <meta name="description" content="Wie NGOs mit KI systematisch mehr Dauerspender gewinnen. 34,4M Spendenentscheidungen. 20 Experimente. Offene Daten für die DACH-NGO-Community.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://info.flyraising.com/">
+  <meta property="og:title" content="FlyRaising — KI-gestützte Dauerspender-Akquise für NGOs">
+  <meta property="og:description" content="34,4 Millionen Spendenentscheidungen. 20 dokumentierte KI-Experimente. Jetzt Benchmark-Daten anfordern.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #141210;
+      --bg2: #1c1a17;
+      --bg3: #242118;
+      --gold: #C4872A;
+      --gold-light: #E5A84A;
+      --text: #E8E2D9;
+      --text-muted: #9A9185;
+      --text-faint: #5A5450;
+      --border: #2C2924;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+    .logo {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.73rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      opacity: 0.8;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+      color: #F0EAE0;
+    }
+    h1 em { color: var(--gold); font-style: normal; }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 48px;
+      line-height: 1.65;
+    }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 0 0 64px;
+    }
+    .stat {
+      background: var(--bg2);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--gold);
+      display: block;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* CTA Cards */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+    .cta-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s;
+    }
+    .cta-card:hover { border-color: var(--gold); }
+    .cta-card.primary { border-color: var(--gold); background: var(--bg3); }
+    .card-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-faint);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .cta-card.primary .card-tag { color: var(--gold); opacity: 0.7; }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .card-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+    .cta-card.primary .card-action {
+      background: var(--gold);
+      color: #141210;
+      padding: 12px 20px;
+      border-radius: 8px;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .cta-card.primary .card-action:hover {
+      background: var(--gold-light);
+      color: #141210;
+    }
+
+    /* Inline demo form */
+    .demo-form-section {
+      border-top: 1px solid var(--border);
+      padding: 56px 0;
+    }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #F0EAE0;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .form-sub { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px; }
+
+    .demo-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 480px;
+    }
+    .demo-form input {
+      padding: 13px 16px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 15px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none;
+    }
+    .demo-form input::placeholder { color: var(--text-faint); }
+    .demo-form input:focus { border-color: var(--gold); }
+    .demo-btn {
+      padding: 14px 24px;
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      color: var(--gold);
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .demo-btn:hover { background: var(--gold); color: #141210; }
+    .success-msg {
+      display: none;
+      padding: 20px;
+      background: var(--bg3);
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      color: var(--gold);
+      font-size: 0.95rem;
+    }
+
+    /* Content nav */
+    .content-nav {
+      border-top: 1px solid var(--border);
+      padding: 48px 0;
+    }
+    .nav-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .nav-link {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      transition: all 0.2s;
+    }
+    .nav-link:hover { border-color: var(--gold); color: var(--text); }
+    .nav-link strong { display: block; color: var(--text); margin-bottom: 4px; font-size: 0.95rem; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      margin-top: 32px;
+    }
+    footer p { font-size: 13px; color: var(--text-faint); text-align: center; }
+    footer a { color: var(--text-faint); }
+    footer a:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .nav-links { grid-template-columns: 1fr; }
+      h1 { font-size: 1.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">FlyRaising</div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="hero">
+      <div class="eyebrow">KI-Fundraising · DACH · Seit 2022</div>
+      <h1>KI-gestützte Dauerspender-Akquise für NGOs —<br><em>wie es wirklich funktioniert</em></h1>
+      <p class="hero-sub">Keine Hochglanz-Versprechen. Offene Daten, dokumentierte Experimente, echte Ergebnisse. Für NGOs im DACH-Raum, die wissen wollen, was hinter dem Buzzword „KI im Fundraising" steckt.</p>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-num">34,4M</span>
+        <span class="stat-label">Spendenentscheidungen durch KI beeinflusst (seit Nov. 2022)</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">20</span>
+        <span class="stat-label">Dokumentierte KI-Experimente mit offenen Daten</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">€80–180</span>
+        <span class="stat-label">Reale CPA-Range Dauerspender im DACH-Raum</span>
+      </div>
+    </div>
+
+    <!-- 3 CTAs -->
+    <div class="cta-grid">
+      <!-- Primary: Benchmark -->
+      <div class="cta-card primary">
+        <div class="card-tag">★ Beliebtester Einstieg</div>
+        <div class="card-title">Benchmark-Daten für NGOs anfordern</div>
+        <div class="card-desc">Was zahlen andere NGOs pro Dauerspender — aufgeschlüsselt nach Größe, Kanal und Spendenbetrag. Der erste offene Branchen-Benchmark im DACH-Raum. Kostenlos als PDF.</div>
+        <a href="/benchmark/" class="card-action">Benchmark jetzt anfordern →</a>
+      </div>
+
+      <!-- Secondary: Experiments -->
+      <div class="cta-card">
+        <div class="card-tag">Offene Daten</div>
+        <div class="card-title">20 KI-Experimente mit echten Ergebnissen</div>
+        <div class="card-desc">Welche KI-Ansätze funktionieren in der Dauerspender-Akquise? Was hat nicht funktioniert? Dokumentiert, ehrlich, ohne Marketingfilter.</div>
+        <a href="https://info.flyraising.com/case-study/" class="card-action">Case Study: +34% mehr Dauerspender →</a>
+      </div>
+
+      <!-- Tertiary: Audiences -->
+      <div class="cta-card">
+        <div class="card-tag">Praxis-Tool</div>
+        <div class="card-title">9 ready-to-use KI-Audiences für Meta Ads</div>
+        <div class="card-desc">Zielgruppendefinitionen, die sich in echten DACH-NGO-Kampagnen bewährt haben. Direkt einsetzbar für Meta Ads — ohne Datenwissenschaftler.</div>
+        <a href="/audiences/" class="card-action">Audiences ansehen →</a>
+      </div>
+    </div>
+
+    <!-- Content links -->
+    <section class="content-nav">
+      <div class="section-label">Themen & Leitfäden</div>
+      <div class="nav-links">
+        <a href="/dauerspender-online-gewinnen" class="nav-link">
+          <strong>Dauerspender online gewinnen</strong>
+          Vollständiger Leitfaden für NGOs 2026
+        </a>
+        <a href="/meta-ads-gemeinnuetzige-organisationen" class="nav-link">
+          <strong>Meta Ads für NGOs</strong>
+          Kampagnen-Setup ohne Agentur
+        </a>
+        <a href="/dsgvo-ki-ngo" class="nav-link">
+          <strong>DSGVO-konforme KI</strong>
+          Was NGOs wissen müssen
+        </a>
+        <a href="/ki-mailing-selektion" class="nav-link">
+          <strong>KI-Mailing-Selektion</strong>
+          Bessere Ergebnisse aus bestehenden Listen
+        </a>
+        <a href="/online-fundraising-ohne-agentur" class="nav-link">
+          <strong>Fundraising ohne Agentur</strong>
+          Kampagnen selbst umsetzen
+        </a>
+        <a href="/case-study/" class="nav-link">Case Study (+47% Response)</a>
+        <a href="/audiences/" class="nav-link">9 KI-Audiences</a>
+        <a href="/benchmark/" class="nav-link">
+          <strong>NGO Benchmark 2026</strong>
+          Benchmark-Daten kostenlos anfordern →
+        </a>
+      </div>
+    </section>
+
+    <!-- Demo form inline -->
+    <section class="demo-form-section" id="demo">
+      <div class="section-label">Demo anfragen</div>
+      <h2>FlyRaising für deine NGO</h2>
+      <p class="form-sub">Kurzes 30-Minuten-Gespräch — wir schauen gemeinsam, ob und wie KI-Dauerspender-Akquise für deine Organisation passt. Keine Verkaufspräsentation.</p>
+
+      <div id="demo-wrapper">
+        <form id="demo-form" class="demo-form" novalidate>
+          <input type="text" name="name" placeholder="Dein Name" required autocomplete="name">
+          <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+          <input type="text" name="org" placeholder="Organisation" autocomplete="organization">
+          <button type="submit" class="demo-btn">Demo anfragen →</button>
+        </form>
+      </div>
+      <div id="demo-success" class="success-msg">
+        ✓ Anfrage erhalten! Wir melden uns innerhalb von 24 Stunden.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 FlyRaising · KI-Fundraising für NGOs im DACH-Raum · <a href="https://flyraising.com">flyraising.com</a> · <a href="https://learn.flyraising.com">learn.flyraising.com</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('demo-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button');
+  btn.textContent = 'Wird gesendet…';
+  btn.disabled = true;
+  const data = {
+    name: this.name.value.trim(),
+    email: this.email.value.trim(),
+    org: this.org.value.trim(),
+    source: 'info.flyraising.com',
+    page: 'homepage-demo-form',
+    ts: new Date().toISOString()
+  };
+  try {
+    const r = await fetch('https://geo-leads-api.agent-a67.workers.dev/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (r.ok) {
+      document.getElementById('demo-wrapper').style.display = 'none';
+      document.getElementById('demo-success').style.display = 'block';
+    } else throw new Error();
+  } catch {
+    btn.textContent = 'Demo anfragen →';
+    btn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
